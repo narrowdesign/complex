@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="map">
+    <div class="selectionBox"></div>
+  </div>
+  <h1 class="message">A complex is a collection of thoughts, feelings, attitudes, and memories that focus on a single concept. The more elements attached to the complex, the greater its influence on the individual. <span>—Carl Jung</span></h1>
+  <div class="instructions">Press on. You’ll figure it out. <span>—The groundskeeper</span></div>
+  <div class="agentMenu">
+    <div class="agentMenu__item agentMenu__item--concept" data-type="concept">Concept</div>
+    <div class="agentMenu__item agentMenu__item--book" data-type="book">Book</div>
+    <div class="agentMenu__item agentMenu__item--person" data-type="person">Person</div>
+    <div class="agentMenu__item agentMenu__item--organization" data-type="organization">Organization</div>
+    <div class="agentMenu__item agentMenu__item--place" data-type="place">Place</div>
+    <div class="agentMenu__item agentMenu__item--other" data-type="other">Other</div>
+  </div>
+  <div class="selectedAgentMenu">
+    <div class="selectedAgentMenu__item" data-type="search">Copy to existing complex</div>
+    <div class="selectedAgentMenu__item" data-type="search">Copy to new complex</div>
+    <div class="selectedAgentMenu__item" data-type="search">Search complexes for selection</div>
+  </div>
+  <select class="complexSelect">
+    <option value="none" selected disabled>Open complexes</option>
+    <option value="geb">Gödel, Escher, Bach</option>
+    <option value="charlie">Poor Charlie</option>
+    <option value="mess">A mess</option>
+    <option value="computerLib">Computer Lib / Dream Machines</option>
+    <option value="nickBooks">Nick’s Books</option>
+    <option value="cgi">Computer Graphics</option>
+  </select>
+</body>
+</html>
+<script src="complexes.js"></script>
+<script src="script.js"></script>

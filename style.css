@@ -73,16 +73,16 @@ body::before {
   transform: translate(11%, 8.5%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleY(1);
 }
 
-.agentMenu__item--book {
-  transform: translate(20%, -173%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
+.agentMenu__item--artifact {
+  transform: translate(13%, -161%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
   background: #add8e6;
   border-right: 3px solid #3e7a8e;
   border-bottom: 3px solid #709fae;
   transition-delay: 200ms;
 }
 
-.isAgentMenu .agentMenu__item--book {
-  transform: translate(20%, -173%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleX(1);
+.isAgentMenu .agentMenu__item--artifact {
+  transform: translate(13%, -161%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleX(1);
 }
 
 .agentMenu__item--person {
@@ -201,7 +201,7 @@ body::before {
   border-bottom: 3px solid #0036;
 }
 
-.agent--book .agent__label {
+.agent--artifact .agent__label {
   background: #add8e6;
   font-style: italic;
   border-right: 3px solid #3e7a8e;
@@ -242,8 +242,8 @@ body::before {
   overflow: visible;
 }
 
-.connection line {
-  
+.connection line:last-of-type {
+  opacity: 0.5;
 }
 
 .relationship {

@@ -8,6 +8,7 @@ const agentMenuItemListEls = document.querySelectorAll('.agentMenu__item');
 const selectedAgentMenuEl = document.querySelector('.selectedAgentMenu');
 const selectionBoxEl = document.querySelector('.selectionBox');
 const mapEl = document.querySelector('.map')
+const complexSelectEl = document.querySelector('.complexSelect');
 
 window.addEventListener('mousedown', handleMouseDown);
 window.addEventListener('mouseup', handleMouseUp);
@@ -47,13 +48,29 @@ let canvasState = {
   endAgent: undefined,
   activeAgent: undefined,
   selectedList: [],
-  ghostSelectedList: []
+  ghostSelectedList: [],
+  undoLevel: -1
 }
 
 let complexState = {
   name: "",
   agentList: [],
   relationshipList: [],
+}
+
+function initializeUI() {
+  Object.keys(localStorage).forEach((key) => {
+    const option = document.createElement("option");
+    option.value = key;
+    option.text = key;
+    complexSelectEl.appendChild(option);
+  })
+  complexSelectEl.addEventListener('change', (e) => {
+    const destroy = complexState.agentList > 5 ? confirm('you sure? this will clear the current complex.') : true;
+    if (!destroy) return;
+    applyState(JSON.parse(localStorage[e.target.value]))
+  })
+  animate();
 }
 
 function hideAgentMenu() {
@@ -91,7 +108,6 @@ function handleKeyUp(e) {
       break;
     case 'Backspace':
       if (canvasState.selectedList.length > 1) {
-        saveState();
         canvasState.selectedList.forEach((agent) => {
           removeAgent(agent);
         })
@@ -118,13 +134,14 @@ function handleKeyUp(e) {
       break;      
     case 'ArrowUp':
       moveSelectedAgents(e);
-      break;      
+      break;
     default:
       break;
   }
 }
 
 function handleKeyPress(e) {
+  saveState();
   switch (e.key) {  
     case 'Enter':
       e.preventDefault();
@@ -189,6 +206,19 @@ function removeAgent(agent) {
   agent.remove();
 }
 
+function getSelectedRelationships() {
+  return complexState.relationshipList.filter((rel, i) => {
+    const relMatches = canvasState.selectedList.filter((agent) => {
+      if (rel.includes(agent)) {
+        return rel;
+      }
+    })
+    if (relMatches.length > 0) {
+      return relMatches;
+    }
+  })
+}
+
 function getRelationshipMatches(agent) {
   return complexState.relationshipList.map((rel, i) => {
     if (rel.includes(agent)) {
@@ -217,9 +247,16 @@ function handleKeyDown(e) {
       break;
     case 'z':
       if (e.metaKey) {
-        const undo = confirm('you sure? this might delete stuff.');
+        const undo = confirm('You sure? This might delete stuff permanently.');
         if (!undo) return;
-        applyState(mementos[mementos.length - 1]);
+
+        if (e.shiftKey) {
+          canvasState.undoLevel--;
+        } else {
+          canvasState.undoLevel++;
+        }
+        const index = Math.min(mementos.length - 1, Math.max(0, mementos.length - 1 - canvasState.undoLevel));
+        applyState(mementos[index]);
       }
     default:
       break;
@@ -273,7 +310,7 @@ function handleMouseUpAgent(e) {
     e.stopPropagation();
   }
   setDefaultCanvasState();
-  // canvasState.activeAgent = e.currentTarget;
+  saveState();
 }
 
 function handleDblClickAgent(e) {
@@ -345,6 +382,15 @@ function selectAgent(e, agent) {
     agent.classList.add('isSelected');
   }
 
+  const matches = getSelectedRelationships()
+  
+  matches.forEach((rel, i) => {
+    rel[1].classList.add('isSelected');
+    rel[2].classList.add('isSelected');
+    rel[0][1].setAttribute(`stroke-width`, '3');
+    rel[0][1].style.opacity = 1;
+  })
+
   canvasState.selectedList.forEach((item) => {
     if (canvasState.selectedList.length > 1) {
       document.activeElement.blur();
@@ -403,14 +449,7 @@ function dragSelected() {
     agent.style.transform = `translate(${agentX}px, ${agentY}px)`;
   })
 
-  const matches = complexState.relationshipList.filter((rel, i) => {
-    const relMatches = canvasState.selectedList.map((agent) => {
-      if (rel.includes(agent)) {
-        return rel;
-      }
-    })
-    return relMatches;
-  })
+  const matches = getSelectedRelationships();
   
   matches.forEach((rel, i) => {
     const startX = rel[1].getBoundingClientRect().left - canvasState.x;
@@ -491,6 +530,15 @@ function clearSelectedList() {
     item.classList.remove('isSelected');
     item.isSelected = false;
   });
+
+  const matches = getSelectedRelationships()
+  
+  matches.forEach((rel, i) => {
+    rel[1].classList.remove('isSelected');
+    rel[2].classList.remove('isSelected');
+    rel[0][1].setAttribute(`stroke-width`, '1');
+    rel[0][1].style.opacity = 0.5;
+  })
   canvasState.selectedList = [];
   document.body.classList.remove('isSelectedAgentMenu');
 }
@@ -534,7 +582,7 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
   agentEl.uuid = uuid || self.crypto.randomUUID();
   
   agentEl.style.transform = `translate(${x}px, ${y}px)`;
-  agentEl.scale = scale;
+  agentEl.scale = Math.max(0.6, scale);
   agentEl.x = x;
   agentEl.y = y;
   agentEl.type = canvasState.currentType;
@@ -571,7 +619,7 @@ function getRotation(type) {
   let rotation = '';
   if (type === "concept") {
     rotation = `rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg)`;
-  } else if (type === "book") {
+  } else if (type === "artifact") {
     rotation = `rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg)`;
   } else if (type === "person") {
     rotation = `rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg)`;
@@ -585,7 +633,7 @@ function getRotation(type) {
 
 function scaleAgent(delta, agent, label) {
   agent.scale -= delta;
-  agent.scale = Math.max(0.5, agent.scale);
+  agent.scale = Math.max(0.6, agent.scale);
   const rotation = getRotation(agent.type);
   label.style.transform = `scale(${Math.round(agent.scale * 5) / 5}) ${rotation}`;
 }
@@ -683,6 +731,10 @@ const Line = function (startX, startY, endX, endY, id) {
 }
 
 function saveState() {
+  if (!complexState.name) {
+    complexState.name = prompt('Name this complex');
+  }
+  if (!complexState.name) return;
   complexState.agentList.forEach((agent, i) => {
     agent.label = agent.innerText;
   });
@@ -693,6 +745,7 @@ function saveState() {
   const state = JSON.parse(JSON.stringify(complexState));
   // structuredClone(canvasState)
   mementos.push(state);
+  localStorage.setItem(complexState.name, JSON.stringify(complexState));
   if (mementos.length > 100) {
     // mementos = mementos.slice(0,100);
   }
@@ -754,16 +807,12 @@ function clearCanvas() {
   })
 }
 
-document.querySelector('.complexSelect').addEventListener('change', (e) => {
-  const destroy = complexState.agentList > 5 ? confirm('you sure? this will clear the current complex.') : true;
-  if (!destroy) return;
-  complexes.forEach((complex) => {
-    if (complex.name === e.target.value) {
-      applyState(complex);
-    }
-  })
-})
-
 function chaos() {
 
 }
+
+function animate() {
+  
+}
+
+initializeUI();

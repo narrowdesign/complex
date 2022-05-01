@@ -34,7 +34,7 @@ const complexes = [
                 "scale": 2.3360349431633938,
                 "x": 786,
                 "y": 243,
-                "type": "book",
+                "type": "artifact",
                 "label": "Poor Charlie’s Almanac",
                 "isSelected": false
             },
@@ -493,7 +493,7 @@ const complexes = [
                 "scale": 1,
                 "x": 786,
                 "y": 108,
-                "type": "book",
+                "type": "artifact",
                 "label": "Poor Richard’s Almanac",
                 "isSelected": false
             },
@@ -1422,7 +1422,7 @@ const complexes = [
                     "scale": 2.3360349431633938,
                     "x": 786,
                     "y": 243,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "Poor Charlie’s Almanac",
                     "isSelected": false
                 },
@@ -1431,7 +1431,7 @@ const complexes = [
                     "scale": 1,
                     "x": 786,
                     "y": 108,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "Poor Richard’s Almanac",
                     "isSelected": false
                 },
@@ -1457,7 +1457,7 @@ const complexes = [
                     "scale": 1,
                     "x": 786,
                     "y": 108,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "Poor Richard’s Almanac",
                     "isSelected": false
                 },
@@ -1509,7 +1509,7 @@ const complexes = [
                     "scale": 2.3360349431633938,
                     "x": 786,
                     "y": 243,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "Poor Charlie’s Almanac",
                     "isSelected": false
                 },
@@ -1526,7 +1526,7 @@ const complexes = [
                     "scale": 2.3360349431633938,
                     "x": 786,
                     "y": 243,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "Poor Charlie’s Almanac",
                     "isSelected": false
                 },
@@ -1786,7 +1786,7 @@ const complexes = [
                 "scale": 2.4101867664512198,
                 "x": 781,
                 "y": 278,
-                "type": "book",
+                "type": "artifact",
                 "label": "GEB",
                 "isSelected": false
             },
@@ -1867,7 +1867,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1030,
                 "y": 186,
-                "type": "book",
+                "type": "artifact",
                 "label": "i am a strange loop",
                 "isSelected": false
             },
@@ -1876,7 +1876,7 @@ const complexes = [
                 "scale": 1.3030848746746775,
                 "x": 1420,
                 "y": 319,
-                "type": "book",
+                "type": "artifact",
                 "label": "principia mathematica",
                 "isSelected": false
             },
@@ -1885,7 +1885,7 @@ const complexes = [
                 "scale": 0.5,
                 "x": 1443,
                 "y": 98,
-                "type": "book",
+                "type": "artifact",
                 "label": "history of western philosophy",
                 "isSelected": false
             },
@@ -1912,7 +1912,7 @@ const complexes = [
                 "scale": 0.5,
                 "x": 1621,
                 "y": 346,
-                "type": "book",
+                "type": "artifact",
                 "label": "adventures of ideas",
                 "isSelected": false
             },
@@ -1966,7 +1966,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1039,
                 "y": 641,
-                "type": "book",
+                "type": "artifact",
                 "label": "a most elegant equation",
                 "isSelected": false
             },
@@ -1993,7 +1993,7 @@ const complexes = [
                 "scale": 1,
                 "x": 438,
                 "y": 947,
-                "type": "book",
+                "type": "artifact",
                 "label": "models of the mind",
                 "isSelected": false
             },
@@ -2011,7 +2011,7 @@ const complexes = [
                 "scale": 1,
                 "x": 862,
                 "y": 969,
-                "type": "book",
+                "type": "artifact",
                 "label": "thinking fast and slow",
                 "isSelected": false
             },
@@ -2065,7 +2065,7 @@ const complexes = [
                 "scale": 0.846552267074585,
                 "x": 1172,
                 "y": 386,
-                "type": "book",
+                "type": "artifact",
                 "label": "godel’s proof",
                 "isSelected": false
             },
@@ -2161,7 +2161,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2178,7 +2178,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2204,7 +2204,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2230,7 +2230,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2256,7 +2256,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2282,7 +2282,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2308,7 +2308,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2334,7 +2334,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2369,7 +2369,7 @@ const complexes = [
                     "scale": 1,
                     "x": 1030,
                     "y": 186,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "i am a strange loop",
                     "isSelected": false
                 },
@@ -2386,7 +2386,7 @@ const complexes = [
                     "scale": 1,
                     "x": 1030,
                     "y": 186,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "i am a strange loop",
                     "isSelected": false
                 },
@@ -2421,7 +2421,7 @@ const complexes = [
                     "scale": 1.3030848746746775,
                     "x": 1420,
                     "y": 319,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "principia mathematica",
                     "isSelected": false
                 },
@@ -2447,7 +2447,7 @@ const complexes = [
                     "scale": 1.3030848746746775,
                     "x": 1420,
                     "y": 319,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "principia mathematica",
                     "isSelected": false
                 },
@@ -2473,7 +2473,7 @@ const complexes = [
                     "scale": 1.3030848746746775,
                     "x": 1420,
                     "y": 319,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "principia mathematica",
                     "isSelected": false
                 },
@@ -2499,7 +2499,7 @@ const complexes = [
                     "scale": 0.5,
                     "x": 1443,
                     "y": 98,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "history of western philosophy",
                     "isSelected": false
                 },
@@ -2525,7 +2525,7 @@ const complexes = [
                     "scale": 0.5,
                     "x": 1621,
                     "y": 346,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "adventures of ideas",
                     "isSelected": false
                 },
@@ -2542,7 +2542,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2568,7 +2568,7 @@ const complexes = [
                     "scale": 1.3030848746746775,
                     "x": 1420,
                     "y": 319,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "principia mathematica",
                     "isSelected": false
                 },
@@ -2594,7 +2594,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2776,7 +2776,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2802,7 +2802,7 @@ const complexes = [
                     "scale": 1,
                     "x": 1039,
                     "y": 641,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "a most elegant equation",
                     "isSelected": false
                 },
@@ -2880,7 +2880,7 @@ const complexes = [
                     "scale": 2.4101867664512198,
                     "x": 781,
                     "y": 278,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "GEB",
                     "isSelected": false
                 },
@@ -2906,7 +2906,7 @@ const complexes = [
                     "scale": 1,
                     "x": 438,
                     "y": 947,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "models of the mind",
                     "isSelected": false
                 },
@@ -2932,7 +2932,7 @@ const complexes = [
                     "scale": 1,
                     "x": 862,
                     "y": 969,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "thinking fast and slow",
                     "isSelected": false
                 },
@@ -3071,7 +3071,7 @@ const complexes = [
                     "scale": 0.846552267074585,
                     "x": 1172,
                     "y": 386,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "godel’s proof",
                     "isSelected": false
                 },
@@ -3088,7 +3088,7 @@ const complexes = [
                     "scale": 0.846552267074585,
                     "x": 1172,
                     "y": 386,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "godel’s proof",
                     "isSelected": false
                 },
@@ -3702,7 +3702,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1028,
                 "y": 908,
-                "type": "book",
+                "type": "artifact",
                 "label": "mathematical theory of communication",
                 "isSelected": false
             },
@@ -3720,7 +3720,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1391,
                 "y": 437,
-                "type": "book",
+                "type": "artifact",
                 "label": "savage mind",
                 "isSelected": false
             },
@@ -3729,7 +3729,7 @@ const complexes = [
                 "scale": 1,
                 "x": 461,
                 "y": 642,
-                "type": "book",
+                "type": "artifact",
                 "label": "models of the mind",
                 "isSelected": false
             },
@@ -3738,7 +3738,7 @@ const complexes = [
                 "scale": 1,
                 "x": 140,
                 "y": 880,
-                "type": "book",
+                "type": "artifact",
                 "label": "dream machines",
                 "isSelected": false
             },
@@ -3765,7 +3765,7 @@ const complexes = [
                 "scale": 1,
                 "x": 895,
                 "y": 565,
-                "type": "book",
+                "type": "artifact",
                 "label": "cybernetics",
                 "isSelected": false
             },
@@ -3783,7 +3783,7 @@ const complexes = [
                 "scale": 1,
                 "x": 489,
                 "y": 181,
-                "type": "book",
+                "type": "artifact",
                 "label": "western philosophy",
                 "isSelected": false
             },
@@ -3792,7 +3792,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1408,
                 "y": 40,
-                "type": "book",
+                "type": "artifact",
                 "label": "archeology of knowledge",
                 "isSelected": false
             },
@@ -3801,7 +3801,7 @@ const complexes = [
                 "scale": 1,
                 "x": 545,
                 "y": 39,
-                "type": "book",
+                "type": "artifact",
                 "label": "symbolism",
                 "isSelected": false
             },
@@ -3963,7 +3963,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1165,
                 "y": 131,
-                "type": "book",
+                "type": "artifact",
                 "label": "ethics",
                 "isSelected": false
             },
@@ -3972,7 +3972,7 @@ const complexes = [
                 "scale": 1,
                 "x": 170,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "principia",
                 "isSelected": false
             },
@@ -3981,7 +3981,7 @@ const complexes = [
                 "scale": 1,
                 "x": 482,
                 "y": 114,
-                "type": "book",
+                "type": "artifact",
                 "label": "principia mathematica",
                 "isSelected": false
             },
@@ -3990,7 +3990,7 @@ const complexes = [
                 "scale": 1,
                 "x": 723,
                 "y": 142,
-                "type": "book",
+                "type": "artifact",
                 "label": "probability",
                 "isSelected": false
             },
@@ -4017,7 +4017,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1067,
                 "y": 17,
-                "type": "book",
+                "type": "artifact",
                 "label": "a most elegant equation",
                 "isSelected": false
             },
@@ -4026,7 +4026,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1168,
                 "y": -141,
-                "type": "book",
+                "type": "artifact",
                 "label": "a math apology",
                 "isSelected": false
             },
@@ -4215,7 +4215,7 @@ const complexes = [
                 "scale": 1,
                 "x": 421,
                 "y": 292,
-                "type": "book",
+                "type": "artifact",
                 "label": "creativity inc",
                 "isSelected": false
             },
@@ -4251,7 +4251,7 @@ const complexes = [
                 "scale": 1,
                 "x": 532,
                 "y": -25,
-                "type": "book",
+                "type": "artifact",
                 "label": "life of the mind",
                 "isSelected": false
             },
@@ -4260,7 +4260,7 @@ const complexes = [
                 "scale": 1,
                 "x": 86,
                 "y": 462,
-                "type": "book",
+                "type": "artifact",
                 "label": "art of computer programming",
                 "isSelected": false
             },
@@ -4269,7 +4269,7 @@ const complexes = [
                 "scale": 1,
                 "x": 708,
                 "y": 483,
-                "type": "book",
+                "type": "artifact",
                 "label": "mondadology",
                 "isSelected": false
             },
@@ -4287,7 +4287,7 @@ const complexes = [
                 "scale": 1,
                 "x": 690,
                 "y": 906,
-                "type": "book",
+                "type": "artifact",
                 "label": "we are as gods",
                 "isSelected": false
             },
@@ -4296,7 +4296,7 @@ const complexes = [
                 "scale": 1,
                 "x": 516.1624441632466,
                 "y": 945.6449014522689,
-                "type": "book",
+                "type": "artifact",
                 "label": "how buildings learn",
                 "isSelected": false
             },
@@ -4314,7 +4314,7 @@ const complexes = [
                 "scale": 1,
                 "x": 415,
                 "y": 831,
-                "type": "book",
+                "type": "artifact",
                 "label": "the information",
                 "isSelected": false
             },
@@ -4323,7 +4323,7 @@ const complexes = [
                 "scale": 1,
                 "x": 193,
                 "y": 797,
-                "type": "book",
+                "type": "artifact",
                 "label": "complexity",
                 "isSelected": false
             },
@@ -4341,7 +4341,7 @@ const complexes = [
                 "scale": 1,
                 "x": 879,
                 "y": 1038,
-                "type": "book",
+                "type": "artifact",
                 "label": "art of doing science and engineering",
                 "isSelected": false
             },
@@ -4350,7 +4350,7 @@ const complexes = [
                 "scale": 1,
                 "x": 321,
                 "y": -12,
-                "type": "book",
+                "type": "artifact",
                 "label": "cosmos",
                 "isSelected": false
             },
@@ -4359,7 +4359,7 @@ const complexes = [
                 "scale": 1,
                 "x": 530.8685433196324,
                 "y": -148.0743662207122,
-                "type": "book",
+                "type": "artifact",
                 "label": "cosmos(2)",
                 "isSelected": false
             },
@@ -4377,7 +4377,7 @@ const complexes = [
                 "scale": 1,
                 "x": 638,
                 "y": 310,
-                "type": "book",
+                "type": "artifact",
                 "label": "creative evolution",
                 "isSelected": false
             },
@@ -4404,7 +4404,7 @@ const complexes = [
                 "scale": 1,
                 "x": 997,
                 "y": 291,
-                "type": "book",
+                "type": "artifact",
                 "label": "being and time",
                 "isSelected": false
             },
@@ -4422,7 +4422,7 @@ const complexes = [
                 "scale": 1,
                 "x": -88,
                 "y": 39,
-                "type": "book",
+                "type": "artifact",
                 "label": "death and life",
                 "isSelected": false
             },
@@ -4431,7 +4431,7 @@ const complexes = [
                 "scale": 1,
                 "x": -255,
                 "y": -37,
-                "type": "book",
+                "type": "artifact",
                 "label": "dust",
                 "isSelected": false
             },
@@ -4440,7 +4440,7 @@ const complexes = [
                 "scale": 1,
                 "x": -136,
                 "y": -136,
-                "type": "book",
+                "type": "artifact",
                 "label": "real world of technology",
                 "isSelected": false
             },
@@ -4449,7 +4449,7 @@ const complexes = [
                 "scale": 1,
                 "x": 116,
                 "y": 23,
-                "type": "book",
+                "type": "artifact",
                 "label": "doors of perception",
                 "isSelected": false
             },
@@ -4458,7 +4458,7 @@ const complexes = [
                 "scale": 1,
                 "x": 101,
                 "y": -3,
-                "type": "book",
+                "type": "artifact",
                 "label": "brave new world",
                 "isSelected": false
             },
@@ -4467,7 +4467,7 @@ const complexes = [
                 "scale": 1,
                 "x": 110,
                 "y": -21,
-                "type": "book",
+                "type": "artifact",
                 "label": "perennial philosophy",
                 "isSelected": false
             },
@@ -4485,7 +4485,7 @@ const complexes = [
                 "scale": 1,
                 "x": 306,
                 "y": -200,
-                "type": "book",
+                "type": "artifact",
                 "label": "analog and digital",
                 "isSelected": false
             },
@@ -4494,7 +4494,7 @@ const complexes = [
                 "scale": 1,
                 "x": 320,
                 "y": -218,
-                "type": "book",
+                "type": "artifact",
                 "label": "world as design",
                 "isSelected": false
             },
@@ -4530,7 +4530,7 @@ const complexes = [
                 "scale": 1,
                 "x": 943,
                 "y": -231,
-                "type": "book",
+                "type": "artifact",
                 "label": "you must be joking",
                 "isSelected": false
             },
@@ -4548,7 +4548,7 @@ const complexes = [
                 "scale": 1,
                 "x": 977,
                 "y": -122,
-                "type": "book",
+                "type": "artifact",
                 "label": "maker of patterns",
                 "isSelected": false
             },
@@ -4557,7 +4557,7 @@ const complexes = [
                 "scale": 1,
                 "x": 933.250575379993,
                 "y": -88.78064275673447,
-                "type": "book",
+                "type": "artifact",
                 "label": "imagined worlds",
                 "isSelected": false
             },
@@ -4575,7 +4575,7 @@ const complexes = [
                 "scale": 1,
                 "x": 537,
                 "y": 57,
-                "type": "book",
+                "type": "artifact",
                 "label": "adventures of ideas",
                 "isSelected": false
             },
@@ -4584,7 +4584,7 @@ const complexes = [
                 "scale": 1,
                 "x": 480,
                 "y": 203,
-                "type": "book",
+                "type": "artifact",
                 "label": "why i am not a christian",
                 "isSelected": false
             },
@@ -4593,7 +4593,7 @@ const complexes = [
                 "scale": 1,
                 "x": 449,
                 "y": 222,
-                "type": "book",
+                "type": "artifact",
                 "label": "free will and official propaganda",
                 "isSelected": false
             },
@@ -4602,7 +4602,7 @@ const complexes = [
                 "scale": 1,
                 "x": 184,
                 "y": 417,
-                "type": "book",
+                "type": "artifact",
                 "label": "metaphors we live by",
                 "isSelected": false
             },
@@ -4611,7 +4611,7 @@ const complexes = [
                 "scale": 1,
                 "x": 293,
                 "y": 375,
-                "type": "book",
+                "type": "artifact",
                 "label": "architecture machines",
                 "isSelected": false
             },
@@ -4638,7 +4638,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1651,
                 "y": 247,
-                "type": "book",
+                "type": "artifact",
                 "label": "critique of pure reason",
                 "isSelected": false
             },
@@ -4647,7 +4647,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1719,
                 "y": 78,
-                "type": "book",
+                "type": "artifact",
                 "label": "pattern language",
                 "isSelected": false
             },
@@ -4665,7 +4665,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1783,
                 "y": 136,
-                "type": "book",
+                "type": "artifact",
                 "label": "timeless way of building",
                 "isSelected": false
             },
@@ -4674,7 +4674,7 @@ const complexes = [
                 "scale": 1,
                 "x": 98,
                 "y": 544,
-                "type": "book",
+                "type": "artifact",
                 "label": "open society",
                 "isSelected": false
             },
@@ -4683,7 +4683,7 @@ const complexes = [
                 "scale": 1,
                 "x": 234,
                 "y": 578,
-                "type": "book",
+                "type": "artifact",
                 "label": "geb",
                 "isSelected": false
             },
@@ -4692,7 +4692,7 @@ const complexes = [
                 "scale": 1,
                 "x": 265,
                 "y": 626,
-                "type": "book",
+                "type": "artifact",
                 "label": "i am a strange loop",
                 "isSelected": false
             },
@@ -4701,7 +4701,7 @@ const complexes = [
                 "scale": 1,
                 "x": 159,
                 "y": 700,
-                "type": "book",
+                "type": "artifact",
                 "label": "structure of scientific revolutions",
                 "isSelected": false
             },
@@ -4710,7 +4710,7 @@ const complexes = [
                 "scale": 1,
                 "x": 560,
                 "y": -71,
-                "type": "book",
+                "type": "artifact",
                 "label": "on revolution",
                 "isSelected": false
             }
@@ -4735,7 +4735,7 @@ const complexes = [
                     "scale": 1,
                     "x": 98,
                     "y": 544,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "open society",
                     "isSelected": false
                 },
@@ -4761,7 +4761,7 @@ const complexes = [
                     "scale": 1,
                     "x": 234,
                     "y": 578,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "geb",
                     "isSelected": false
                 },
@@ -5182,7 +5182,7 @@ const complexes = [
                 "scale": 0.5,
                 "x": 1142,
                 "y": 376,
-                "type": "book",
+                "type": "artifact",
                 "label": "book of shaders",
                 "isSelected": false
             },
@@ -6308,7 +6308,7 @@ const complexes = [
                     "scale": 0.5,
                     "x": 1142,
                     "y": 376,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "book of shaders",
                     "isSelected": false
                 },
@@ -6325,7 +6325,7 @@ const complexes = [
                     "scale": 0.5,
                     "x": 1142,
                     "y": 376,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "book of shaders",
                     "isSelected": false
                 },
@@ -6377,7 +6377,7 @@ const complexes = [
                 "scale": 1.9419728276878614,
                 "x": 811,
                 "y": 329,
-                "type": "book",
+                "type": "artifact",
                 "label": "Computer Lib",
                 "isSelected": false
             },
@@ -6431,7 +6431,7 @@ const complexes = [
                 "scale": 2.029059429764748,
                 "x": 829,
                 "y": 386,
-                "type": "book",
+                "type": "artifact",
                 "label": "Dream Machines",
                 "isSelected": false
             },
@@ -6548,7 +6548,7 @@ const complexes = [
                 "scale": 0.5,
                 "x": 962,
                 "y": 647,
-                "type": "book",
+                "type": "artifact",
                 "label": "anything and everything",
                 "isSelected": false
             },
@@ -6917,7 +6917,7 @@ const complexes = [
                 "scale": 1,
                 "x": 747,
                 "y": 531,
-                "type": "book",
+                "type": "artifact",
                 "label": "Oz",
                 "isSelected": false
             },
@@ -6986,7 +6986,7 @@ const complexes = [
                     "scale": 1.9419728276878614,
                     "x": 811,
                     "y": 329,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "Computer Lib",
                     "isSelected": false
                 },
@@ -7073,7 +7073,7 @@ const complexes = [
                     "scale": 0.5,
                     "x": 962,
                     "y": 647,
-                    "type": "book",
+                    "type": "artifact",
                     "label": "anything and everything",
                     "isSelected": false
                 },
@@ -7350,7 +7350,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "Metaphors We Live By",
                 "isSelected": false
             },
@@ -7368,7 +7368,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "Davos Man: How the Billionaires Devoured the World",
                 "isSelected": false
             },
@@ -7386,7 +7386,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "Order Out of Chaos: Man's New Dialogue with Nature",
                 "isSelected": false
             },
@@ -7404,7 +7404,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "Antkind",
                 "isSelected": false
             },
@@ -7422,7 +7422,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "Primitive Interaction Design",
                 "isSelected": false
             },
@@ -7440,7 +7440,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Geometry of Meaning: Semantics Based on Conceptual Spaces",
                 "isSelected": false
             },
@@ -7458,7 +7458,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Human Argument: The Writings of Agnes Denes",
                 "isSelected": false
             },
@@ -7476,7 +7476,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "Geometrical Psychology, or the Science of Representation: An Abstract of the Theories and Diagrams of B. W. Betts (Classic Reprint)",
                 "isSelected": false
             },
@@ -7494,7 +7494,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Myth of Sisyphus",
                 "isSelected": false
             },
@@ -7512,7 +7512,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": -30,
-                "type": "book",
+                "type": "artifact",
                 "label": "An Essay Concerning Human Understanding",
                 "isSelected": false
             },
@@ -7530,7 +7530,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Fear of Knowledge: Against Relativism and Constructivism",
                 "isSelected": false
             },
@@ -7548,7 +7548,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Opticks",
                 "isSelected": false
             },
@@ -7566,7 +7566,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Signals and Boundaries: Building Blocks for Complex Adaptive Systems",
                 "isSelected": false
             },
@@ -7584,7 +7584,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Theory of Architecture",
                 "isSelected": false
             },
@@ -7602,7 +7602,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Problem of Knowledge",
                 "isSelected": false
             },
@@ -7620,7 +7620,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed",
                 "isSelected": false
             },
@@ -7638,7 +7638,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Archaeology of Knowledge & The Discourse on Language",
                 "isSelected": false
             },
@@ -7656,7 +7656,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Euclids Elements of Geometry",
                 "isSelected": false
             },
@@ -7674,7 +7674,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Elementary Linear Algebra",
                 "isSelected": false
             },
@@ -7692,7 +7692,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Art of Doing Science and Engineering: Learning to Learn",
                 "isSelected": false
             },
@@ -7710,7 +7710,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Process of Creating Life",
                 "isSelected": false
             },
@@ -7728,7 +7728,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Einstein's Clocks, Poincare's Maps: Empires of Time",
                 "isSelected": false
             },
@@ -7746,7 +7746,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Sciences of the Artificial",
                 "isSelected": false
             },
@@ -7764,7 +7764,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The New Elements of Mathematics by Charles S. Peirce: Mathematical Philosophy",
                 "isSelected": false
             },
@@ -7782,7 +7782,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Principles of Mathematics",
                 "isSelected": false
             },
@@ -7800,7 +7800,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Logic of Scientific Discovery",
                 "isSelected": false
             },
@@ -7818,7 +7818,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Organon: The works of Aristotle on Logic",
                 "isSelected": false
             },
@@ -7836,7 +7836,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Mathematical Analysis of Logic",
                 "isSelected": false
             },
@@ -7854,7 +7854,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Stamped from the Beginning: The Definitive History of Racist Ideas in America",
                 "isSelected": false
             },
@@ -7872,7 +7872,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Principia: Mathematical Principles of Natural Philosophy",
                 "isSelected": false
             },
@@ -7890,7 +7890,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Programmer's Introduction to Mathematics",
                 "isSelected": false
             },
@@ -7908,7 +7908,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Science and Hypothesis",
                 "isSelected": false
             },
@@ -7926,7 +7926,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Philosophical Essay on Probabilities",
                 "isSelected": false
             },
@@ -7944,7 +7944,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "On Growth and Form",
                 "isSelected": false
             },
@@ -7962,7 +7962,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "An Introductory Course in Computational Neuroscience",
                 "isSelected": false
             },
@@ -7980,7 +7980,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Art of Computer Programming, Volume 1: Fundamental Algorithms",
                 "isSelected": false
             },
@@ -7998,7 +7998,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Gödel, Escher, Bach: An Eternal Golden Braid",
                 "isSelected": false
             },
@@ -8016,7 +8016,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Models of the Mind: How Physics, Engineering and Mathematics Have Shaped Our Understanding of the Brain",
                 "isSelected": false
             },
@@ -8034,7 +8034,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Selected Poems John Keats",
                 "isSelected": false
             },
@@ -8052,7 +8052,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Groundwork of the Metaphysic of Morals",
                 "isSelected": false
             },
@@ -8070,7 +8070,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Entangled Life: How Fungi Make Our Worlds, Change Our Minds & Shape Our Futures",
                 "isSelected": false
             },
@@ -8088,7 +8088,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Real World of Technology",
                 "isSelected": false
             },
@@ -8106,7 +8106,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Being and Time",
                 "isSelected": false
             },
@@ -8124,7 +8124,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Dictionary of Obscure Sorrows",
                 "isSelected": false
             },
@@ -8142,7 +8142,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Faust, Part 1",
                 "isSelected": false
             },
@@ -8160,7 +8160,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The World As I See It",
                 "isSelected": false
             },
@@ -8178,7 +8178,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Later Works of John Dewey, Volume 10, 1925 - 1953: 1934, Art as Experience",
                 "isSelected": false
             },
@@ -8196,7 +8196,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "How to Live: 27 conflicting answers and one weird conclusion",
                 "isSelected": false
             },
@@ -8214,7 +8214,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Dawn of Everything: A New History of Humanity",
                 "isSelected": false
             },
@@ -8232,7 +8232,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Free Thought and Official Propaganda",
                 "isSelected": false
             },
@@ -8250,7 +8250,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Principles of Psychology: Volume 1",
                 "isSelected": false
             },
@@ -8268,7 +8268,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "A City is Not a Tree: 50th Anniversary Edition",
                 "isSelected": false
             },
@@ -8286,7 +8286,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Treatise Concerning the Principles of Human Knowledge",
                 "isSelected": false
             },
@@ -8304,7 +8304,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Art & Science of Ernst Haeckel (XXL)",
                 "isSelected": false
             },
@@ -8322,7 +8322,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Order of Time",
                 "isSelected": false
             },
@@ -8340,7 +8340,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "QED: The Strange Theory of Light and Matter",
                 "isSelected": false
             },
@@ -8358,7 +8358,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "What Is Life?: How Chemistry Becomes Biology",
                 "isSelected": false
             },
@@ -8376,7 +8376,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Social Contract",
                 "isSelected": false
             },
@@ -8394,7 +8394,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Euthyphro. Apology. Crito. Phaedo",
                 "isSelected": false
             },
@@ -8412,7 +8412,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Candide",
                 "isSelected": false
             },
@@ -8430,7 +8430,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Problems of Philosophy: The Theory of Knowledge",
                 "isSelected": false
             },
@@ -8448,7 +8448,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Practicing Stoic: A Philosophical User's Manual",
                 "isSelected": false
             },
@@ -8466,7 +8466,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Ecce Homo",
                 "isSelected": false
             },
@@ -8484,7 +8484,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Debt: The First 5,000 Years",
                 "isSelected": false
             },
@@ -8502,7 +8502,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Consilience: The Unity of Knowledge",
                 "isSelected": false
             },
@@ -8520,7 +8520,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Greatest Minds and Ideas of All Time",
                 "isSelected": false
             },
@@ -8538,7 +8538,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Shape: The Hidden Geometry of Information, Biology, Strategy, Democracy, and Everything Else",
                 "isSelected": false
             },
@@ -8556,7 +8556,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Oregon Experiment",
                 "isSelected": false
             },
@@ -8574,7 +8574,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Yearbook",
                 "isSelected": false
             },
@@ -8592,7 +8592,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 1170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Scout Mindset: Why Some People See Things Clearly and Others Don't",
                 "isSelected": false
             },
@@ -8610,7 +8610,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Invention of Nature: Alexander von Humboldt's New World",
                 "isSelected": false
             },
@@ -8628,7 +8628,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Critique of Pure Reason",
                 "isSelected": false
             },
@@ -8646,7 +8646,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Einstein's Relativity and the Quantum Revolution: Modern Physics for Non-Scientists [Parts 1 and 2]",
                 "isSelected": false
             },
@@ -8664,7 +8664,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Myth of the Framework: In Defence of Science and Rationality",
                 "isSelected": false
             },
@@ -8682,7 +8682,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Guns, Germs, and Steel: The Fates of Human Societies",
                 "isSelected": false
             },
@@ -8700,7 +8700,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Imagined Worlds",
                 "isSelected": false
             },
@@ -8718,7 +8718,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Death and Life of Great American Cities",
                 "isSelected": false
             },
@@ -8736,7 +8736,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Art of War",
                 "isSelected": false
             },
@@ -8754,7 +8754,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Symbolism, its Meaning and Effect",
                 "isSelected": false
             },
@@ -8772,7 +8772,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 1370,
-                "type": "book",
+                "type": "artifact",
                 "label": "A City Is Not a Computer: Other Urban Intelligences",
                 "isSelected": false
             },
@@ -8790,7 +8790,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Brave New World (Books That Changed Man's Thinking)",
                 "isSelected": false
             },
@@ -8808,7 +8808,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Walden & Civil Disobedience",
                 "isSelected": false
             },
@@ -8826,7 +8826,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The First Three Minutes: A Modern View of the Origin of fhe Universe",
                 "isSelected": false
             },
@@ -8844,7 +8844,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Training the Mind and Cultivating Loving-Kindness",
                 "isSelected": false
             },
@@ -8862,7 +8862,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Janus Point: A New Theory of Time",
                 "isSelected": false
             },
@@ -8880,7 +8880,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Helgoland: The World of Quantum Theory",
                 "isSelected": false
             },
@@ -8898,7 +8898,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Science of Can and Can't: A Physicist's Journey Through the Land of Counterfactuals",
                 "isSelected": false
             },
@@ -8916,7 +8916,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Cosmic Serpent: DNA and the Origins of Knowledge",
                 "isSelected": false
             },
@@ -8934,7 +8934,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Ideas: General Introduction to Pure Phenomenology (Muirhead Library of Philosophy Book 10)",
                 "isSelected": false
             },
@@ -8952,7 +8952,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 1570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Doors of Perception",
                 "isSelected": false
             },
@@ -8970,7 +8970,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Sky Above, Great Wind: The Life and Poetry of Zen Master Ryokan",
                 "isSelected": false
             },
@@ -8988,7 +8988,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Man's Search for Meaning",
                 "isSelected": false
             },
@@ -9006,7 +9006,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Possible Minds: 25 Ways of Looking at AI",
                 "isSelected": false
             },
@@ -9024,7 +9024,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The History of Western Philosophy",
                 "isSelected": false
             },
@@ -9042,7 +9042,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "From Darwin to Derrida: Selfish Genes, Social Selves, and the Meanings of Life",
                 "isSelected": false
             },
@@ -9060,7 +9060,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Cybernetics: Or the Control and Communication in the Animal and the Machine",
                 "isSelected": false
             },
@@ -9078,7 +9078,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Beginning of Infinity: Explanations That Transform the World",
                 "isSelected": false
             },
@@ -9096,7 +9096,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Ethics of Ambiguity",
                 "isSelected": false
             },
@@ -9114,7 +9114,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Souls of Black Folk",
                 "isSelected": false
             },
@@ -9132,7 +9132,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 1770,
-                "type": "book",
+                "type": "artifact",
                 "label": "An Enquiry Concerning Human Understanding",
                 "isSelected": false
             },
@@ -9150,7 +9150,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Creative Evolution",
                 "isSelected": false
             },
@@ -9168,7 +9168,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "On Denoting",
                 "isSelected": false
             },
@@ -9186,7 +9186,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Peace Is Every Step: The Path of Mindfulness in Everyday Life",
                 "isSelected": false
             },
@@ -9204,7 +9204,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "What Is Art?",
                 "isSelected": false
             },
@@ -9222,7 +9222,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Against Interpretation and Other Essays",
                 "isSelected": false
             },
@@ -9240,7 +9240,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Adventures of Ideas",
                 "isSelected": false
             },
@@ -9258,7 +9258,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "How We Think",
                 "isSelected": false
             },
@@ -9276,7 +9276,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "DNA: The Story of the Genetic Revolution",
                 "isSelected": false
             },
@@ -9294,7 +9294,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Nature of Technology: What It Is and How It Evolves",
                 "isSelected": false
             },
@@ -9312,7 +9312,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 1970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Ethics",
                 "isSelected": false
             },
@@ -9330,7 +9330,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "A World Beyond Physics: The Emergence and Evolution of Life",
                 "isSelected": false
             },
@@ -9348,7 +9348,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "What Is Life? with Mind and Matter and Autobiographical Sketches",
                 "isSelected": false
             },
@@ -9366,7 +9366,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "A New Program for Graphic Design",
                 "isSelected": false
             },
@@ -9384,7 +9384,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Complexity: The Emerging Science at the Edge of Order and Chaos",
                 "isSelected": false
             },
@@ -9402,7 +9402,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Thinking in Systems: A Primer",
                 "isSelected": false
             },
@@ -9420,7 +9420,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Diagrammatic Writing",
                 "isSelected": false
             },
@@ -9438,7 +9438,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Critique of Judgment",
                 "isSelected": false
             },
@@ -9456,7 +9456,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Gödel's Proof",
                 "isSelected": false
             },
@@ -9474,7 +9474,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Complexity and Chaos",
                 "isSelected": false
             },
@@ -9492,7 +9492,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 2170,
-                "type": "book",
+                "type": "artifact",
                 "label": "What I Believe",
                 "isSelected": false
             },
@@ -9510,7 +9510,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "On Revolution",
                 "isSelected": false
             },
@@ -9528,7 +9528,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Cosmos",
                 "isSelected": false
             },
@@ -9546,7 +9546,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Promised Land",
                 "isSelected": false
             },
@@ -9564,7 +9564,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Wealth of Nations, Books 1-3",
                 "isSelected": false
             },
@@ -9582,7 +9582,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Interaction of Color",
                 "isSelected": false
             },
@@ -9600,7 +9600,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Leonardo da Vinci",
                 "isSelected": false
             },
@@ -9618,7 +9618,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Analogous and Digital",
                 "isSelected": false
             },
@@ -9636,7 +9636,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Discourse on Method and Meditations on First Philosophy",
                 "isSelected": false
             },
@@ -9654,7 +9654,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values (Phaedrus, #1)",
                 "isSelected": false
             },
@@ -9672,7 +9672,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 2370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Modern Chair: Classic Designs by Thonet, Breuer, Le Corbusier, Eames and Others",
                 "isSelected": false
             },
@@ -9690,7 +9690,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Reading Mind: A Cognitive Approach to Understanding How the Mind Reads",
                 "isSelected": false
             },
@@ -9708,7 +9708,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Animal Farm",
                 "isSelected": false
             },
@@ -9726,7 +9726,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "1984",
                 "isSelected": false
             },
@@ -9744,7 +9744,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Outliers: The Story of Success",
                 "isSelected": false
             },
@@ -9762,7 +9762,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Martian",
                 "isSelected": false
             },
@@ -9780,7 +9780,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Of Mice and Men",
                 "isSelected": false
             },
@@ -9798,7 +9798,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Motorcycle Diaries: Notes on a Latin American Journey",
                 "isSelected": false
             },
@@ -9816,7 +9816,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Fear and Loathing in Las Vegas",
                 "isSelected": false
             },
@@ -9834,7 +9834,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "To Kill a Mockingbird",
                 "isSelected": false
             },
@@ -9852,7 +9852,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 2570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy, #1)",
                 "isSelected": false
             },
@@ -9870,7 +9870,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Naked",
                 "isSelected": false
             },
@@ -9888,7 +9888,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Tuesdays with Morrie",
                 "isSelected": false
             },
@@ -9906,7 +9906,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Mathematical Theory of Communication",
                 "isSelected": false
             },
@@ -9924,7 +9924,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Narrative of the Life of Frederick Douglass",
                 "isSelected": false
             },
@@ -9942,7 +9942,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The World As Design",
                 "isSelected": false
             },
@@ -9960,7 +9960,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "William James, Charles Peirce, and American Pragmatism",
                 "isSelected": false
             },
@@ -9978,7 +9978,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "A People's History of the United States",
                 "isSelected": false
             },
@@ -9996,7 +9996,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Critique of Practical Reason",
                 "isSelected": false
             },
@@ -10014,7 +10014,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Shape of Design",
                 "isSelected": false
             },
@@ -10032,7 +10032,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 2770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Are We Human? Notes on an Archaeology of Design",
                 "isSelected": false
             },
@@ -10050,7 +10050,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Marx in 90 Minutes",
                 "isSelected": false
             },
@@ -10068,7 +10068,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Phenomenon of Life",
                 "isSelected": false
             },
@@ -10086,7 +10086,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Life of the Mind",
                 "isSelected": false
             },
@@ -10104,7 +10104,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Art of Being",
                 "isSelected": false
             },
@@ -10122,7 +10122,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Bertrand Russel and A. N. Whitehead",
                 "isSelected": false
             },
@@ -10140,7 +10140,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Thoughts on Design",
                 "isSelected": false
             },
@@ -10158,7 +10158,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Language of Vision",
                 "isSelected": false
             },
@@ -10176,7 +10176,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Compendium for Literates",
                 "isSelected": false
             },
@@ -10194,7 +10194,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Computation as Design",
                 "isSelected": false
             },
@@ -10212,7 +10212,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 2970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
                 "isSelected": false
             },
@@ -10230,7 +10230,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Against Creativity",
                 "isSelected": false
             },
@@ -10248,7 +10248,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Notes on the Synthesis of Form",
                 "isSelected": false
             },
@@ -10266,7 +10266,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Tractatus Logico-Philosophicus",
                 "isSelected": false
             },
@@ -10284,7 +10284,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Hidden Life of Trees: what they feel, how they communicate : discoveries from a secret world",
                 "isSelected": false
             },
@@ -10302,7 +10302,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Hume in 90 Minutes",
                 "isSelected": false
             },
@@ -10320,7 +10320,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Wittgenstein in 90 Minutes",
                 "isSelected": false
             },
@@ -10338,7 +10338,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Aristotle for Everybody",
                 "isSelected": false
             },
@@ -10356,7 +10356,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "How to Make Our Ideas Clear (Readings in Pragmatism Book 2)",
                 "isSelected": false
             },
@@ -10374,7 +10374,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Educated",
                 "isSelected": false
             },
@@ -10392,7 +10392,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 3170,
-                "type": "book",
+                "type": "artifact",
                 "label": "First Outlines of Logic, Applied to Grammar and Etymology (Classic Reprint)",
                 "isSelected": false
             },
@@ -10410,7 +10410,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Mathematician's Apology",
                 "isSelected": false
             },
@@ -10428,7 +10428,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Monadology and Other Philosophical Essays",
                 "isSelected": false
             },
@@ -10446,7 +10446,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Simplifying Set Theory",
                 "isSelected": false
             },
@@ -10464,7 +10464,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Work of Art in the Age of Its Technological Reproducibility, and Other Writings on Media",
                 "isSelected": false
             },
@@ -10482,7 +10482,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Information: A History, a Theory, a Flood",
                 "isSelected": false
             },
@@ -10500,7 +10500,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Karl Gerstner: Designing Programmes",
                 "isSelected": false
             },
@@ -10518,7 +10518,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Structure of Scientific Revolutions",
                 "isSelected": false
             },
@@ -10536,7 +10536,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Open Society and Its Enemies - Volume One: The Spell of Plato",
                 "isSelected": false
             },
@@ -10554,7 +10554,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Selfish Gene",
                 "isSelected": false
             },
@@ -10572,7 +10572,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 3370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Fabric of Reality: The Science of Parallel Universes--and Its Implications",
                 "isSelected": false
             },
@@ -10590,7 +10590,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Most Elegant Equation: Euler's Formula and the Beauty of Mathematics",
                 "isSelected": false
             },
@@ -10608,7 +10608,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Letters from a Stoic",
                 "isSelected": false
             },
@@ -10626,7 +10626,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "White Fragility: Why It’s So Hard for White People to Talk About Racism",
                 "isSelected": false
             },
@@ -10644,7 +10644,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Pattern on the Stone: The Simple Ideas that Make Computers Work",
                 "isSelected": false
             },
@@ -10662,7 +10662,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Muriel Cooper",
                 "isSelected": false
             },
@@ -10680,7 +10680,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Open Society and Its Enemies",
                 "isSelected": false
             },
@@ -10698,7 +10698,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Wall and Piece",
                 "isSelected": false
             },
@@ -10716,7 +10716,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Creativity Code: How AI Is Learning to Write, Paint and Think",
                 "isSelected": false
             },
@@ -10734,7 +10734,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Beyond Good and Evil",
                 "isSelected": false
             },
@@ -10752,7 +10752,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 3570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Savage Mind",
                 "isSelected": false
             },
@@ -10770,7 +10770,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Self-Reliance and Other Essays",
                 "isSelected": false
             },
@@ -10788,7 +10788,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration",
                 "isSelected": false
             },
@@ -10806,7 +10806,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Medium is the Massage",
                 "isSelected": false
             },
@@ -10824,7 +10824,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Meditations",
                 "isSelected": false
             },
@@ -10842,7 +10842,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Thinking, Fast and Slow",
                 "isSelected": false
             },
@@ -10860,7 +10860,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Notes from Underground",
                 "isSelected": false
             },
@@ -10878,7 +10878,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Black Swan: The Impact of the Highly Improbable",
                 "isSelected": false
             },
@@ -10896,7 +10896,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "I Am a Strange Loop",
                 "isSelected": false
             },
@@ -10914,7 +10914,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Pattern Language: Towns, Buildings, Construction",
                 "isSelected": false
             },
@@ -10932,7 +10932,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 3770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Nature Of The Physical World",
                 "isSelected": false
             },
@@ -10950,7 +10950,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Chaos: Making a New Science",
                 "isSelected": false
             },
@@ -10968,7 +10968,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Maker of Patterns: An Autobiography Through Letters",
                 "isSelected": false
             },
@@ -10986,7 +10986,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Your Brain Is a Time Machine: The Neuroscience and Physics of Time",
                 "isSelected": false
             },
@@ -11004,7 +11004,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "How to Read a Book: The Classic Guide to Intelligent Reading",
                 "isSelected": false
             },
@@ -11022,7 +11022,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Our Mathematical Universe: My Quest for the Ultimate Nature of Reality",
                 "isSelected": false
             },
@@ -11040,7 +11040,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Weniger, Aber Besser/Less But Better",
                 "isSelected": false
             },
@@ -11058,7 +11058,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Dream Machine: J.C.R. Licklider and the Revolution That Made Computing Personal",
                 "isSelected": false
             },
@@ -11076,7 +11076,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Creativity: Flow and the Psychology of Discovery and Invention",
                 "isSelected": false
             },
@@ -11094,7 +11094,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Courage to Create",
                 "isSelected": false
             },
@@ -11112,7 +11112,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 3970,
-                "type": "book",
+                "type": "artifact",
                 "label": "Predictably Irrational: The Hidden Forces That Shape Our Decisions",
                 "isSelected": false
             },
@@ -11130,7 +11130,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Dude and the Zen Master",
                 "isSelected": false
             },
@@ -11148,7 +11148,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Principles: Summary",
                 "isSelected": false
             },
@@ -11166,7 +11166,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Dreamland: The True Tale of America's Opiate Epidemic",
                 "isSelected": false
             },
@@ -11184,7 +11184,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "American Gods",
                 "isSelected": false
             },
@@ -11202,7 +11202,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Closer Together, Further Apart: The Effect of Technology and the Internet on Parenting, Work, and Relationships",
                 "isSelected": false
             },
@@ -11220,7 +11220,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "Life 3.0: Being Human in the Age of Artificial Intelligence",
                 "isSelected": false
             },
@@ -11238,7 +11238,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Innovator's Solution: Creating and Sustaining Successful Growth",
                 "isSelected": false
             },
@@ -11256,7 +11256,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "How Will You Measure Your Life?",
                 "isSelected": false
             },
@@ -11274,7 +11274,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "How Music Works",
                 "isSelected": false
             },
@@ -11292,7 +11292,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 4170,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Demon-Haunted World: Science as a Candle in the Dark",
                 "isSelected": false
             },
@@ -11310,7 +11310,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Revolt of the Public and the Crisis of Authority",
                 "isSelected": false
             },
@@ -11328,7 +11328,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "21 Lessons for the 21st Century",
                 "isSelected": false
             },
@@ -11346,7 +11346,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Sapiens: A Brief History of Humankind",
                 "isSelected": false
             },
@@ -11364,7 +11364,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Strange Order of Things: Life, Feeling, and the Making of Cultures",
                 "isSelected": false
             },
@@ -11382,7 +11382,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "AI Superpowers: China, Silicon Valley, and the New World Order",
                 "isSelected": false
             },
@@ -11400,7 +11400,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Man Who Mistook His Wife for a Hat and Other Clinical Tales",
                 "isSelected": false
             },
@@ -11418,7 +11418,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Principles: Life and Work",
                 "isSelected": false
             },
@@ -11436,7 +11436,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Timeless Way of Building",
                 "isSelected": false
             },
@@ -11454,7 +11454,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "Swann's Way",
                 "isSelected": false
             },
@@ -11472,7 +11472,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 4370,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Art of Happiness: A Handbook for Living",
                 "isSelected": false
             },
@@ -11490,7 +11490,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Prince",
                 "isSelected": false
             },
@@ -11508,7 +11508,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "On the Road",
                 "isSelected": false
             },
@@ -11526,7 +11526,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Book of Joy: Lasting Happiness in a Changing World",
                 "isSelected": false
             },
@@ -11544,7 +11544,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "You Belong to the Universe: Buckminster Fuller and the Future",
                 "isSelected": false
             },
@@ -11562,7 +11562,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Practicing Mind: Bringing Discipline and Focus into Your Life",
                 "isSelected": false
             },
@@ -11580,7 +11580,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World",
                 "isSelected": false
             },
@@ -11598,7 +11598,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "A Life in Parts",
                 "isSelected": false
             },
@@ -11616,7 +11616,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Homo Deus: A History of Tomorrow",
                 "isSelected": false
             },
@@ -11634,7 +11634,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1600,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Astrophysics for People in a Hurry",
                 "isSelected": false
             },
@@ -11652,7 +11652,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1800,
                 "y": 4570,
-                "type": "book",
+                "type": "artifact",
                 "label": "Borne (Borne #1)",
                 "isSelected": false
             },
@@ -11670,7 +11670,7 @@ const complexes = [
                 "scale": 1,
                 "x": 0,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Braving the Wilderness: The Quest for True Belonging and the Courage to Stand Alone",
                 "isSelected": false
             },
@@ -11688,7 +11688,7 @@ const complexes = [
                 "scale": 1,
                 "x": 200,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Essentialism: The Disciplined Pursuit of Less",
                 "isSelected": false
             },
@@ -11706,7 +11706,7 @@ const complexes = [
                 "scale": 1,
                 "x": 400,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment",
                 "isSelected": false
             },
@@ -11724,7 +11724,7 @@ const complexes = [
                 "scale": 1,
                 "x": 600,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Cutting Through Spiritual Materialism",
                 "isSelected": false
             },
@@ -11742,7 +11742,7 @@ const complexes = [
                 "scale": 1,
                 "x": 800,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "To Sell is Human: The Surprising Truth About Moving Others",
                 "isSelected": false
             },
@@ -11760,7 +11760,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1000,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "The Power of Habit: Why We Do What We Do in Life and Business",
                 "isSelected": false
             },
@@ -11778,7 +11778,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1200,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Creative Confidence: Unleashing the Creative Potential Within Us All",
                 "isSelected": false
             },
@@ -11796,7 +11796,7 @@ const complexes = [
                 "scale": 1,
                 "x": 1400,
                 "y": 4770,
-                "type": "book",
+                "type": "artifact",
                 "label": "Beyond Boundaries: The New Neuroscience of Connecting Brains with Machines and How It Will Change Our Lives",
                 "isSelected": false
             },

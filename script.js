@@ -22,6 +22,7 @@ agentMenuItemListEls.forEach((item) => {
 })
 
 const mementos = [];
+const types = ['all', 'concept','artifact','person','organization','place'];
 
 let canvasState = {
   currentType: 'concept',
@@ -38,6 +39,7 @@ let canvasState = {
   isDoubleClick: false,
   isAltKey: false,
   isSelecting: false,
+  isolatedType: 0,
   mouseX: window.innerWidth / 2,
   mouseY: window.innerHeight / 2,
   mouseMoveX: 0,
@@ -59,7 +61,7 @@ let complexState = {
 }
 
 function initializeUI() {
-  Object.keys(localStorage).forEach((key) => {
+  Object.keys(localStorage).sort().forEach((key) => {
     const option = document.createElement("option");
     option.value = key;
     option.text = key;
@@ -134,6 +136,24 @@ function handleKeyUp(e) {
       break;      
     case 'ArrowUp':
       moveSelectedAgents(e);
+      break;
+    case '0':
+      toggleType(0);
+      break;
+    case '1':
+      toggleType(1);
+      break;
+    case '2':
+      toggleType(2);
+      break;
+    case '3':
+      toggleType(3);
+      break;
+    case '4':
+      toggleType(4);
+      break;
+    case '5':
+      toggleType(5);
       break;
     default:
       break;
@@ -385,8 +405,8 @@ function selectAgent(e, agent) {
   const matches = getSelectedRelationships()
   
   matches.forEach((rel, i) => {
-    rel[1].classList.add('isSelected');
-    rel[2].classList.add('isSelected');
+    rel[1].classList.add('isHighlighted');
+    rel[2].classList.add('isHighlighted');
     rel[0][1].setAttribute(`stroke-width`, '3');
     rel[0][1].style.opacity = 1;
   })
@@ -401,6 +421,25 @@ function selectAgent(e, agent) {
   canvasState.isAgentDragging = false;
 
   showSelectedAgentMenu(e);
+}
+
+function deselectAgent(agent) {
+  const matchIndex = canvasState.selectedList.indexOf(agent);
+  if (matchIndex !== -1) {
+    agent.isSelected = false;
+    agent.classList.remove('isSelected');
+    
+    const matches = getSelectedRelationships()
+    
+    matches.forEach((rel, i) => {
+      rel[1].classList.remove('isHighlighted');
+      rel[2].classList.remove('isHighlighted');
+      rel[0][1].setAttribute(`stroke-width`, '1');
+      rel[0][1].style.opacity = 0.5;
+    })
+
+    canvasState.selectedList.splice(matchIndex, 1);
+  }
 }
 
 function setDefaultCanvasState() {
@@ -494,8 +533,9 @@ function dragSelectionBox() {
         selectAgent('', agent);
       }
     } else {
-      agent.isSelected = false;
-      agent.classList.remove('isSelected');
+      if (agent.isSelected) {
+        deselectAgent(agent);
+      }
     }
   })
 }
@@ -534,8 +574,8 @@ function clearSelectedList() {
   const matches = getSelectedRelationships()
   
   matches.forEach((rel, i) => {
-    rel[1].classList.remove('isSelected');
-    rel[2].classList.remove('isSelected');
+    rel[1].classList.remove('isHighlighted');
+    rel[2].classList.remove('isHighlighted');
     rel[0][1].setAttribute(`stroke-width`, '1');
     rel[0][1].style.opacity = 0.5;
   })
@@ -545,6 +585,24 @@ function clearSelectedList() {
 
 function handleMouseEnterAgent(e) {
   
+}
+
+function toggleType(num) {
+  const type = types[num];
+  if (num === 0 || canvasState.isolatedType === num) {
+    document.body.classList.remove('isIsolated');
+    document.querySelectorAll(`.agent--isIsolated`).forEach((agent) => {
+      agent.classList.remove('agent--isIsolated');
+    })
+    canvasState.isolatedType = 0;
+
+  } else if (num !== 0) {
+    document.body.classList.add('isIsolated');
+    document.querySelectorAll(`.agent--${type}`).forEach((agent) => {
+      agent.classList.add('agent--isIsolated');
+    })
+    canvasState.isolatedType = num;
+  }
 }
 
 function showAgentMenu(e) {
@@ -563,13 +621,19 @@ function showSelectedAgentMenu(e) {
 }
 
 function createAgent(type = canvasState.currentType, text = '', x = canvasState.mouseDownX, y = canvasState.mouseDownY, scale = 1, uuid, index) {
+  let label = text;
   if (!canvasState.isInitialized) {
     canvasState.isInitialized;
     document.body.classList.add('isInitialized');
   }
-  if (index === undefined) {
-    saveState();
+
+  if (complexState.agentList.length === 0 && index === undefined) {
+    if (!complexState.name) {
+      complexState.name = prompt('Name this complex');
+      label = complexState.name;
+    }
   }
+
   canvasState.currentType = type || canvasState.currentType;
   const agentEl = document.createElement('div');
   agentEl.classList.add('agent');
@@ -588,9 +652,9 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
   agentEl.type = canvasState.currentType;
   let rotation = getRotation(agentEl.type);
   agentLabelEl.style.transform = `scale(${scale}) ${rotation}`;
-  agentEl.label = text;
+  agentEl.label = label;
   agentLabelEl.contentEditable = true;
-  agentLabelEl.innerText = text;
+  agentLabelEl.innerText = label;
   agentEl.addEventListener('click', handleClickAgent);
   agentEl.addEventListener('mousedown', handleMouseDownAgent);
   agentEl.addEventListener('mouseenter', handleMouseEnterAgent);
@@ -611,21 +675,22 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
     complexState.agentList.splice(index, 1, agentEl);
   } else {
     complexState.agentList.push(agentEl);
+    saveState();
     agentLabelEl.focus();
   }
 }
 
 function getRotation(type) {
   let rotation = '';
-  if (type === "concept") {
+  if (type === types[1]) {
     rotation = `rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg)`;
-  } else if (type === "artifact") {
+  } else if (type === types[2]) {
     rotation = `rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg)`;
-  } else if (type === "person") {
+  } else if (type === types[3]) {
     rotation = `rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg)`;
-  } else if (type === "organization") {
+  } else if (type === types[4]) {
     rotation = `rotateY(35.75deg) rotateZ(-25deg) rotateX(330deg)`;
-  } else if (type === "place") {
+  } else if (type === types[5]) {
     rotation = `rotateX(54.75deg) rotateY(0deg) rotateZ(315deg)`;
   }
   return rotation;
@@ -731,10 +796,6 @@ const Line = function (startX, startY, endX, endY, id) {
 }
 
 function saveState() {
-  if (!complexState.name) {
-    complexState.name = prompt('Name this complex');
-  }
-  if (!complexState.name) return;
   complexState.agentList.forEach((agent, i) => {
     agent.label = agent.innerText;
   });

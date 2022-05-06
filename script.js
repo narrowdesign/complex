@@ -745,8 +745,8 @@ function connectAgents(index, text = '>') {
   connectionEl.appendChild(defsEl);
   mapEl.appendChild(relationshipEl);
   mapEl.appendChild(connectionEl);
-  const startBg = window.getComputedStyle(canvasState.startAgent.querySelector('.agent__label')).backgroundColor;
-  const endBg = window.getComputedStyle(canvasState.endAgent.querySelector('.agent__label')).backgroundColor;
+  const startBg = window.getComputedStyle(canvasState.startAgent.querySelector('.agent__label')).getPropertyValue('--bgColor');
+  const endBg = window.getComputedStyle(canvasState.endAgent.querySelector('.agent__label')).getPropertyValue('--bgColor');
   relationshipLabelEl.style.borderColor = startBg;
   relationshipLabelEl.style.color = startBg;
   stop1El.setAttribute('stop-color', startBg);

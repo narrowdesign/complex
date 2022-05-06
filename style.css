@@ -201,14 +201,14 @@ body::before {
 
 .agent--concept .agent__label {
   --bgColor: #ffa07a;
-  background: radial-gradient(var(--bgColor) 30%, transparent), radial-gradient(lightblue 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#fba8db 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(lightgreen 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(var(--bgColor) 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
   border-bottom: 2px solid #79341399;
 }
 
 .agent--artifact .agent__label {
   --bgColor: #add8e6;
-  background: radial-gradient(var(--bgColor) 30%, transparent), radial-gradient(lightblue 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#fba8db 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(lightgreen 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(var(--bgColor) 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   font-style: italic;
   border-right: 2px solid #3e7a8e99;
   border-bottom: 2px solid #709fae99;
@@ -216,21 +216,21 @@ body::before {
 
 .agent--person .agent__label {
   --bgColor: #f8b8de;
-  background: radial-gradient(var(--bgColor) 30%, transparent), radial-gradient(lightblue 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#fba8db 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(lightgreen 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(var(--bgColor) 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
   border-right: 2px solid #c780be99;
 }
 
 .agent--organization .agent__label {
   --bgColor: #c6c1c1;
-  background: radial-gradient(var(--bgColor) 30%, transparent), radial-gradient(lightblue 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#fba8db 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(lightgreen 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(var(--bgColor) 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #ddddee99;
   border-left: 2px solid #99888899;
 }
 
 .agent--place .agent__label {
   --bgColor: #aaddaa;
-  background: radial-gradient(var(--bgColor) 30%, transparent), radial-gradient(lightblue 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#fba8db 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(lightgreen 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(var(--bgColor) 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
   border-bottom: 2px solid #63886399;
 }
@@ -240,12 +240,13 @@ body::before {
 }
 
 .isSelected .agent__label {
-  outline: 2px solid white99;
+  outline: 2px solid #ffffffaa !important;
   user-select: auto;
 }
 
 .isHighlighted .agent__label {
   box-shadow: 0 0 30px #f8b8de;
+  outline: 1px solid #ffffff55;
 }
 
 .connection {

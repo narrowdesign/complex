@@ -9,6 +9,8 @@ const selectedAgentMenuEl = document.querySelector('.selectedAgentMenu');
 const selectionBoxEl = document.querySelector('.selectionBox');
 const mapEl = document.querySelector('.map')
 const complexSelectEl = document.querySelector('.complexSelect');
+const newFromSelectedButton = document.querySelector('.button--newFromSelected');
+const copySelectedButton = document.querySelector('.button--copySelected');
 
 window.addEventListener('mousedown', handleMouseDown);
 window.addEventListener('mouseup', handleMouseUp);
@@ -20,6 +22,16 @@ window.addEventListener('keypress', handleKeyPress)
 agentMenuItemListEls.forEach((item) => {
   item.addEventListener('mouseup', handleMouseUpAgentMenuItem);
 })
+
+newFromSelectedButton.addEventListener('mousedown', (e) => {
+  e.stopPropagation();
+  createComplexFromSelected()
+});
+
+copySelectedButton.addEventListener('mousedown', (e) => {
+  e.stopPropagation();
+  copySelected()
+});
 
 const mementos = [];
 const types = ['all', 'concept','artifact','person','organization','place'];
@@ -33,6 +45,7 @@ let canvasState = {
   isInitialized: false,
   isMouseDown: false,
   isAgentDragging: false,
+  isAgentFocused: false,
   isSelectedAgentMenu: false,
   isGhostDragging: false,
   isCanvasDragging: false,
@@ -278,6 +291,12 @@ function handleKeyDown(e) {
         const index = Math.min(mementos.length - 1, Math.max(0, mementos.length - 1 - canvasState.undoLevel));
         applyState(mementos[index]);
       }
+      break;
+    case 'v':
+      if (e.metaKey) {
+        pasteSelected();
+      }
+      break;
     default:
       break;
   }
@@ -291,7 +310,11 @@ function handleMouseDownAgent(e) {
   const agent = e.currentTarget;
   canvasState.startAgent = agent;
   canvasState.activeAgent = agent;
-  selectAgent(e, agent);
+  if ((e.shiftKey || e.metaKey) && canvasState.selectedList.indexOf(agent) !== -1) {
+    deselectAgent(agent)
+  } else {
+    selectAgent(e, agent);
+  }
   e.stopPropagation();
 
   // if (e.altKey) {
@@ -326,6 +349,7 @@ function handleMouseUpAgent(e) {
   } else {
     setTimeout(() => {
       document.activeElement.blur();
+      canvasState.isAgentFocused = false;
     },20)
     e.stopPropagation();
   }
@@ -336,6 +360,7 @@ function handleMouseUpAgent(e) {
 function handleDblClickAgent(e) {
   const agent = e.currentTarget;
   setTimeout(() => {
+    canvasState.isAgentFocused = true;
     agent.querySelector('.agent__label').focus();
   },25)
 }
@@ -399,7 +424,6 @@ function selectAgent(e, agent) {
       clearSelectedList();
     }
     canvasState.selectedList.push(agent);
-    agent.classList.add('isSelected');
   }
 
   const matches = getSelectedRelationships()
@@ -414,6 +438,7 @@ function selectAgent(e, agent) {
   canvasState.selectedList.forEach((item) => {
     if (canvasState.selectedList.length > 1) {
       document.activeElement.blur();
+      canvasState.isAgentFocused = false;
     }
     item.classList.add('isSelected');
     item.isSelected = true;
@@ -428,6 +453,7 @@ function deselectAgent(agent) {
   if (matchIndex !== -1) {
     agent.isSelected = false;
     agent.classList.remove('isSelected');
+    canvasState.isAgentFocused = false;
     
     const matches = getSelectedRelationships()
     
@@ -439,6 +465,9 @@ function deselectAgent(agent) {
     })
 
     canvasState.selectedList.splice(matchIndex, 1);
+  }
+  if (canvasState.selectedList.length === 0) {
+    hideSelectedAgentMenu();
   }
 }
 
@@ -568,6 +597,7 @@ function clearSelectedList() {
 
   canvasState.selectedList.forEach((item) => {
     item.classList.remove('isSelected');
+    canvasState.isAgentFocused = false;
     item.isSelected = false;
   });
 
@@ -588,6 +618,7 @@ function handleMouseEnterAgent(e) {
 }
 
 function toggleType(num) {
+  // if ()
   const type = types[num];
   if (num === 0 || canvasState.isolatedType === num) {
     document.body.classList.remove('isIsolated');
@@ -614,10 +645,13 @@ function showAgentMenu(e) {
 }
 
 function showSelectedAgentMenu(e) {
-  const x = e.clientX;
-  const y = e.clientY;
-  canvasState.isSelectedAgentMenu;
+  canvasState.isSelectedAgentMenu = true;
   document.body.classList.add('isSelectedAgentMenu');
+}
+
+function hideSelectedAgentMenu() {
+  canvasState.isSelectedAgentMenu = false;
+  document.body.classList.remove('isSelectedAgentMenu');
 }
 
 function createAgent(type = canvasState.currentType, text = '', x = canvasState.mouseDownX, y = canvasState.mouseDownY, scale = 1, uuid, index) {
@@ -652,6 +686,7 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
   agentEl.type = canvasState.currentType;
   let rotation = getRotation(agentEl.type);
   agentLabelEl.style.transform = `scale(${scale}) ${rotation}`;
+  agentLabelEl.style.animationDelay = `${Math.random()}s`;
   agentEl.label = label;
   agentLabelEl.contentEditable = true;
   agentLabelEl.innerText = label;
@@ -678,6 +713,7 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
     saveState();
     agentLabelEl.focus();
   }
+  return agentEl;
 }
 
 function getRotation(type) {
@@ -712,7 +748,6 @@ function connectAgents(index, text = '>') {
   const relationshipEl = document.createElement('div');
   const relationshipLabelEl = document.createElement('div');
   connectionEl.classList.add('connection');
-  // connectionEl.setAttribute('viewBox', `0 0 ${window.innerWidth} ${window.innerHeight}`);
   const startX = canvasState.startAgent.getBoundingClientRect().left - canvasState.x;
   const startY = canvasState.startAgent.getBoundingClientRect().top - canvasState.y;
   const endX = canvasState.endAgent.getBoundingClientRect().left - canvasState.x;
@@ -795,6 +830,28 @@ const Line = function (startX, startY, endX, endY, id) {
   return [lineEl, line2El];
 }
 
+function createComplexFromSelected() {
+  clearCanvas();
+  const selectedAgents = canvasState.selectedList;
+  complexState.relationshipList = [];
+  complexState.name = prompt('Name this complex') || null;
+  resetCanvasState();
+  selectedAgents.forEach((agent, i) => {
+    createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, null, i);
+  })
+}
+
+function copySelected() {
+  canvasState.copiedAgents = canvasState.selectedList;
+}
+
+function pasteSelected() {
+  canvasState.copiedAgents.forEach((agent, i) => {
+    const newAgent = createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, null, i);
+    // selectAgent(newAgent);
+  })
+}
+
 function saveState() {
   complexState.agentList.forEach((agent, i) => {
     agent.label = agent.innerText;
@@ -804,12 +861,8 @@ function saveState() {
   });
   
   const state = JSON.parse(JSON.stringify(complexState));
-  // structuredClone(canvasState)
   mementos.push(state);
   localStorage.setItem(complexState.name, JSON.stringify(complexState));
-  if (mementos.length > 100) {
-    // mementos = mementos.slice(0,100);
-  }
 }
 
 function applyState(state) {
@@ -818,6 +871,25 @@ function applyState(state) {
   complexState.agentList.forEach((agent, i) => {
     createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.uuid, i);
   })
+  resetCanvasState();
+  
+  complexState.relationshipList.forEach((rel, i) => {
+    complexState.agentList.forEach((agent) => {
+      if (agent.uuid === rel[1].uuid) {
+        canvasState.startAgent = agent;
+      }
+      if (agent.uuid === rel[2].uuid) {
+        canvasState.endAgent = agent;
+      }
+    });
+    connectAgents(i, rel[4]);
+  })
+
+
+  dragCanvas()
+}
+
+function resetCanvasState() {
   canvasState.x = 0;
   canvasState.y = 0;
   canvasState.centerX = window.innerWidth / 2;
@@ -832,22 +904,7 @@ function applyState(state) {
   canvasState.endAgent = null;
   canvasState.isAgentDragging = false;
   canvasState.isGhostDragging = false;
-  
-  complexState.relationshipList.forEach((rel, i) => {
-    complexState.agentList.forEach((agent) => {
-      if (agent.uuid === rel[1].uuid) {
-        canvasState.startAgent = agent;
-      }
-      if (agent.uuid === rel[2].uuid) {
-        canvasState.endAgent = agent;
-      }
-    });
-    connectAgents(i, rel[4]);
-  })
-
   canvasState.selectedList = [];
-
-  dragCanvas()
 }
 
 function clearCanvas() {

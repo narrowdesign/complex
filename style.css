@@ -43,13 +43,14 @@ body::before {
   pointer-events: none;
   left: -20px;
   top: -20px;
+  transition: opacity 200ms;
 }
 
 .agentMenu__item {
   position: absolute;
   opacity: 0;
   transform: translate(-50%, -50%);
-  transition: transform 300ms ease-out, opacity 100ms ease-out;
+  transition: transform 300ms ease-out, opacity 200ms ease-out;
   padding: 5px 10px;
   border-radius: 6px;
   font-size: 19px;
@@ -63,9 +64,11 @@ body::before {
 
 .agentMenu__item--concept {
   transform: translate(11%, 8.5%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
-  background: #ffa07a;
+  --bgColor: #ffa07a;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
-  border-bottom: 2px solid #003699;
+  border-bottom: 2px solid #79341399;
+  animation: glow 0.6s infinite;
   transition-delay: 0ms;
 }
 
@@ -75,7 +78,9 @@ body::before {
 
 .agentMenu__item--artifact {
   transform: translate(13%, -161%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
-  background: #add8e6;
+  --bgColor: #add8e6;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
+  font-style: italic;
   border-right: 2px solid #3e7a8e99;
   border-bottom: 2px solid #709fae99;
   transition-delay: 200ms;
@@ -87,9 +92,11 @@ body::before {
 
 .agentMenu__item--person {
   transform: translate(1%, -100%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleX(1);
-  background: #f8b8de;
+  --bgColor: #f8b8de;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
   border-right: 2px solid #c780be99;
+  animation: glow 2.1s infinite;
   transition-delay: 150ms;
 }
 
@@ -99,9 +106,11 @@ body::before {
 
 .agentMenu__item--organization {
   transform: translate(-79%, -66%) rotateX(54.75deg) rotateY(0deg) rotateZ(315deg) scaleY(1);
-  background: #c6c1c1;
-  border-top: 2px solid #ddef99;
-  border-left: 2px solid #988f99;
+  --bgColor: #c6c1c1;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
+  border-top: 2px solid #ddddee99;
+  border-left: 2px solid #99888899;
+  animation: glow 3.2s infinite;
   transition-delay: 50ms;
 }
 
@@ -111,9 +120,11 @@ body::before {
 
 .agentMenu__item--place {
   transform: translate(-50.5%, -47%) rotateY(35.75deg) rotateZ(-25deg) rotateX(330deg) scaleY(1);
-  background: #aaddaa;
+  --bgColor: #aaddaa;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
   border-bottom: 2px solid #63886399;
+  animation: glow 4.3s infinite;
   transition-delay: 100ms;
 }
 
@@ -201,38 +212,43 @@ body::before {
 
 .agent--concept .agent__label {
   --bgColor: #ffa07a;
-  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
   border-bottom: 2px solid #79341399;
+  animation: glow 0.6s infinite;
 }
 
 .agent--artifact .agent__label {
   --bgColor: #add8e6;
-  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   font-style: italic;
   border-right: 2px solid #3e7a8e99;
   border-bottom: 2px solid #709fae99;
+  animation: glow 1s infinite;
 }
 
 .agent--person .agent__label {
   --bgColor: #f8b8de;
-  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
   border-right: 2px solid #c780be99;
+  animation: glow 2.1s infinite;
 }
 
 .agent--organization .agent__label {
   --bgColor: #c6c1c1;
-  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #ddddee99;
   border-left: 2px solid #99888899;
+  animation: glow 3.2s infinite;
 }
 
 .agent--place .agent__label {
   --bgColor: #aaddaa;
-  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(rgba(173, 216, 230, 150) 30%, transparent 70%) 40px 8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) -40px -8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
+  background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
   border-bottom: 2px solid #63886399;
+  animation: glow 4.3s infinite;
 }
 
 .agent--other .agent__label {
@@ -240,13 +256,20 @@ body::before {
 }
 
 .isSelected .agent__label {
-  outline: 2px solid #ffffffaa !important;
+  outline: 2px solid #ffffffdd !important;
   user-select: auto;
+}
+
+.isSelectedAgentMenu .button--newFromSelected,
+.isSelectedAgentMenu .button--copySelected {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
 }
 
 .isHighlighted .agent__label {
   box-shadow: 0 0 30px #f8b8de;
-  outline: 1px solid #ffffff55;
+  outline: 1px solid #ffffff99;
 }
 
 .connection {
@@ -311,10 +334,50 @@ body::before {
   cursor: grab;
 }
 
-.complexSelect {
+.menu {
   position: fixed;
   right: 10px;
   bottom: 10px;
+}
+
+.button {
+  position: relative;
+  color: #add8e6;
+  padding: 12px 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 4px 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.button--copySelected {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms, transform 200ms;
+  transform: scale(0.8);
+}
+
+.button--newFromSelected {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms, transform 200ms;
+  transform: scale(0.8);
+}
+
+.button::after {
+  content: '+';
+  position: absolute;
+  right: 6px;
+  top: 3px;
+}
+
+.button:hover {
+  background: #add8e6;
+  color: #111111;
+}
+
+.complexSelect {
   border: none;
   outline: none;
   border-radius: 3px;
@@ -322,6 +385,9 @@ body::before {
   background: #000;
   color: #add8e6;
   user-select: none;
+  font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Georgia', serif;
+  padding: 4px;
+  font-size: 14px;
 }
 
 .message {
@@ -387,6 +453,16 @@ body::before {
     opacity: 1 !important;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 1;
+  } 50% {
+    opacity: 0.9;
+  } 100% {
     opacity: 1;
   }
 }

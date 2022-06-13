@@ -188,7 +188,6 @@ function moveSelectedAgents(e) {
   if (canvasState.selectedList.length > 1 || (canvasState.selectedList[0] !== document.activeElement.parentElement)) {
     let multiplier = e.shiftKey ? 10 : 1;
     multiplier = e.altKey ? 0.25 : multiplier;
-    console.log(e.shiftKey)
     canvasState.selectedList.forEach((agent) => {
       if (e.key === 'ArrowLeft') {
         agent.x -= 1 * multiplier;
@@ -654,7 +653,7 @@ function hideSelectedAgentMenu() {
   document.body.classList.remove('isSelectedAgentMenu');
 }
 
-function createAgent(type = canvasState.currentType, text = '', x = canvasState.mouseDownX, y = canvasState.mouseDownY, scale = 1, uuid, index) {
+function createAgent(type = canvasState.currentType, text = '', x = canvasState.mouseDownX, y = canvasState.mouseDownY, scale = 1, blur = 0, uuid, index) {
   let label = text;
   if (!canvasState.isInitialized) {
     canvasState.isInitialized;
@@ -681,12 +680,18 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
   
   agentEl.style.transform = `translate(${x}px, ${y}px)`;
   agentEl.scale = Math.max(0.6, scale);
+  agentEl.blur = blur;
   agentEl.x = x;
   agentEl.y = y;
   agentEl.type = canvasState.currentType;
   let rotation = getRotation(agentEl.type);
-  agentLabelEl.style.transform = `scale(${scale}) ${rotation}`;
-  agentLabelEl.style.animationDelay = `${Math.random()}s`;
+  setTimeout(() => {
+    agentLabelEl.style.transform = `scale(${scale}) ${rotation}`;
+    agentLabelEl.style.opacity = `1`;
+    agentLabelEl.style.transition = 'opacity 500ms, transform 400ms';
+    agentLabelEl.style.filter = `blur(${blur}px)`;
+  }, 10 * index);
+  agentLabelEl.style.animationDelay = `${Math.random() + 10 * index}s`;
   agentEl.label = label;
   agentLabelEl.contentEditable = true;
   agentLabelEl.innerText = label;
@@ -700,8 +705,16 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
   
     if (e.ctrlKey) {
       const scaleDelta = e.deltaY * 0.01;
+      agentLabelEl.style.transitionProperty = "opacity";
       scaleAgent(scaleDelta, agentEl, agentLabelEl);
+    } else {
+      const blurDelta = e.deltaY * 0.01;
+      blurAgent(blurDelta, agentEl, agentLabelEl);
     }
+    clearTimeout(canvasState.wheelTimeout);
+    canvasState.wheelTimeout = setTimeout(() => {
+      saveState()
+    }, 1000)
   };
   
   agentEl.appendChild(agentLabelEl);
@@ -737,6 +750,12 @@ function scaleAgent(delta, agent, label) {
   agent.scale = Math.max(0.6, agent.scale);
   const rotation = getRotation(agent.type);
   label.style.transform = `scale(${Math.round(agent.scale * 5) / 5}) ${rotation}`;
+}
+
+function blurAgent(delta, agent, label) {
+  agent.blur -= delta;
+  agent.blur = Math.max(0, agent.blur);
+  label.style.filter = `blur(${agent.blur}px)`;
 }
 
 function connectAgents(index, text = '>') {
@@ -837,7 +856,7 @@ function createComplexFromSelected() {
   complexState.name = prompt('Name this complex') || null;
   resetCanvasState();
   selectedAgents.forEach((agent, i) => {
-    createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, null, i);
+    createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, null, i);
   })
 }
 
@@ -847,7 +866,7 @@ function copySelected() {
 
 function pasteSelected() {
   canvasState.copiedAgents.forEach((agent, i) => {
-    const newAgent = createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, null, i);
+    const newAgent = createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, null, i);
     // selectAgent(newAgent);
   })
 }
@@ -869,7 +888,7 @@ function applyState(state) {
   clearCanvas();
   complexState = JSON.parse(JSON.stringify(state));
   complexState.agentList.forEach((agent, i) => {
-    createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.uuid, i);
+    createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, agent.uuid, i);
   })
   resetCanvasState();
   

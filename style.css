@@ -189,6 +189,8 @@ body::before {
   max-width: 500px;
   user-select: none;
   cursor: pointer;
+  opacity: 0;
+  transition: transform 400ms, opacity 200ms;
 }
 
 .agent {
@@ -212,6 +214,7 @@ body::before {
 
 .agent--concept .agent__label {
   --bgColor: #ffa07a;
+  transform: rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
   border-bottom: 2px solid #79341399;
@@ -220,6 +223,7 @@ body::before {
 
 .agent--artifact .agent__label {
   --bgColor: #add8e6;
+  transform: rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   font-style: italic;
   border-right: 2px solid #3e7a8e99;
@@ -229,6 +233,7 @@ body::before {
 
 .agent--person .agent__label {
   --bgColor: #f8b8de;
+  transform: rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
   border-right: 2px solid #c780be99;
@@ -237,6 +242,7 @@ body::before {
 
 .agent--organization .agent__label {
   --bgColor: #c6c1c1;
+  transform: rotateX(54.75deg) rotateY(0deg) rotateZ(315deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #ddddee99;
   border-left: 2px solid #99888899;
@@ -245,6 +251,7 @@ body::before {
 
 .agent--place .agent__label {
   --bgColor: #aaddaa;
+  transform: rotateY(35.75deg) rotateZ(-25deg) rotateX(330deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
   border-bottom: 2px solid #63886399;

@@ -130,6 +130,7 @@ function handleKeyUp(e) {
       }
       break;      
     case 'Enter':
+      if (canvasState.isShiftKey) return;
       removeEmpty();
       if (complexState.agentList.length > 0) {
         canvasState.mouseDownX = document.body.getBoundingClientRect().width / 2 + Math.cos(complexState.agentList.length / Math.PI * 2) * 200 - canvasState.x;
@@ -177,7 +178,9 @@ function handleKeyPress(e) {
   saveState();
   switch (e.key) {  
     case 'Enter':
-      e.preventDefault();
+      if (!e.shiftKey) {
+        e.preventDefault();
+      }
       break;
     default:
       break;

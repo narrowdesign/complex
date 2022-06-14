@@ -183,10 +183,11 @@ body::before {
   padding: 2px 12px 3px;
   border-radius: 8px;
   text-align: center;
-  white-space: nowrap;
+  white-space: pre;
   text-overflow: ellipsis;
   overflow: auto;
-  max-width: 500px;
+  max-width: 700px;
+  min-width: 80px;
   user-select: none;
   cursor: pointer;
   opacity: 0;

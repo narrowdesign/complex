@@ -1,4 +1,16 @@
-// FEATURES
+// TODO FEATURES
+
+/* 
+
+IF agent has complex
+
+link to complex
+display differently
+link to elsewhere
+
+spread items out (increase distance)
+
+*/
 
 // appears in X complexes
 // group selection into class or list

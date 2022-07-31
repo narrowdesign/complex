@@ -5,12 +5,13 @@
 
 const agentMenuEl = document.querySelector('.agentMenu');
 const agentMenuItemListEls = document.querySelectorAll('.agentMenu__item');
-const selectedAgentMenuEl = document.querySelector('.selectedAgentMenu');
+const selectedAgentMenuEl = document.querySelector('.menu');
 const selectionBoxEl = document.querySelector('.selectionBox');
 const mapEl = document.querySelector('.map')
 const complexSelectEl = document.querySelector('.complexSelect');
 const newFromSelectedButton = document.querySelector('.button--newFromSelected');
 const copySelectedButton = document.querySelector('.button--copySelected');
+const elsewhereEl = document.querySelector('.elsewhereList');
 
 window.addEventListener('mousedown', handleMouseDown);
 window.addEventListener('mouseup', handleMouseUp);
@@ -64,6 +65,7 @@ let canvasState = {
   activeAgent: undefined,
   selectedList: [],
   ghostSelectedList: [],
+  alsoList: [],
   undoLevel: -1
 }
 
@@ -428,9 +430,9 @@ function selectAgent(e, agent) {
     canvasState.selectedList.push(agent);
   }
 
-  const matches = getSelectedRelationships()
+  const relationships = getSelectedRelationships()
   
-  matches.forEach((rel, i) => {
+  relationships.forEach((rel, i) => {
     rel[1].classList.add('isHighlighted');
     rel[2].classList.add('isHighlighted');
     rel[0][1].setAttribute(`stroke-width`, '3');
@@ -446,7 +448,24 @@ function selectAgent(e, agent) {
     item.isSelected = true;
   })
   canvasState.isAgentDragging = false;
-
+  canvasState.alsoList = [];
+  document.querySelectorAll('.otherComplex').forEach((other) => {
+    other.remove();
+  })
+  Object.keys(localStorage).forEach((key) => {
+    if (key === complexState.name) return;
+    let matched = false;
+    const nameParts = agent.label.split(' ')
+    const lastName = agent.type === "person" ? nameParts[nameParts.length - 1].toLowerCase() : false;
+    JSON.parse(localStorage[key]).agentList.forEach((otherAgent) => {
+      const rawLabel = agent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
+      const otherRawLabel = otherAgent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
+      if ((otherRawLabel.indexOf(rawLabel) !== -1 || otherRawLabel === lastName) && !matched) {
+        canvasState.alsoList.push(key);
+        matched = true;
+      }
+    })  
+  })
   showSelectedAgentMenu(e);
 }
 
@@ -457,9 +476,9 @@ function deselectAgent(agent) {
     agent.classList.remove('isSelected');
     canvasState.isAgentFocused = false;
     
-    const matches = getSelectedRelationships()
+    const relationships = getSelectedRelationships()
     
-    matches.forEach((rel, i) => {
+    relationships.forEach((rel, i) => {
       rel[1].classList.remove('isHighlighted');
       rel[2].classList.remove('isHighlighted');
       rel[0][1].setAttribute(`stroke-width`, '1');
@@ -519,9 +538,9 @@ function dragSelected() {
     agent.style.transform = `translate(${agentX}px, ${agentY}px)`;
   })
 
-  const matches = getSelectedRelationships();
+  const relationships = getSelectedRelationships();
   
-  matches.forEach((rel, i) => {
+  relationships.forEach((rel, i) => {
     const startX = rel[1].getBoundingClientRect().left - canvasState.x;
     const startY = rel[1].getBoundingClientRect().top - canvasState.y;
     
@@ -612,6 +631,10 @@ function clearSelectedList() {
     rel[0][1].style.opacity = 0.5;
   })
   canvasState.selectedList = [];
+  document.querySelectorAll('.otherComplex').forEach((other) => {
+    other.remove();
+  })
+  canvasState.alsoList = [];
   document.body.classList.remove('isSelectedAgentMenu');
 }
 
@@ -649,6 +672,13 @@ function showAgentMenu(e) {
 function showSelectedAgentMenu(e) {
   canvasState.isSelectedAgentMenu = true;
   document.body.classList.add('isSelectedAgentMenu');
+  canvasState.alsoList.forEach((complex) => {
+    const agentEl = document.createElement('div');
+    agentEl.innerHTML = complex;
+    agentEl.classList.add('otherComplex');
+    selectedAgentMenuEl.prepend(agentEl);
+    elsewhereEl.style.transform = `translate(${canvasState.selectedList[0].x + canvasState.x}px,${canvasState.selectedList[0].y + canvasState.y}px)`
+  })
 }
 
 function hideSelectedAgentMenu() {
@@ -694,7 +724,7 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
     agentLabelEl.style.transition = 'opacity 500ms, transform 400ms';
     agentLabelEl.style.filter = `blur(${blur}px)`;
   }, 10 * index);
-  agentLabelEl.style.animationDelay = `${Math.random() + 10 * index}s`;
+  agentLabelEl.style.animationDelay = `${Math.random()}s`;
   agentEl.label = label;
   agentLabelEl.contentEditable = true;
   agentLabelEl.innerText = label;

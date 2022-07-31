@@ -50,7 +50,7 @@ body::before {
   position: absolute;
   opacity: 0;
   transform: translate(-50%, -50%);
-  transition: transform 300ms ease-out, opacity 200ms ease-out;
+  transition: transform 300ms ease-out, opacity 200ms ease-in;
   padding: 5px 10px;
   border-radius: 6px;
   font-size: 19px;
@@ -63,7 +63,7 @@ body::before {
 }
 
 .agentMenu__item--concept {
-  transform: translate(11%, 8.5%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
+  transform: translate(11%, 0%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(1);
   --bgColor: #ffa07a;
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
@@ -73,11 +73,11 @@ body::before {
 }
 
 .isAgentMenu .agentMenu__item--concept {
-  transform: translate(11%, 8.5%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleY(1);
+  transform: translate(12%, 9.5%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleY(1);
 }
 
 .agentMenu__item--artifact {
-  transform: translate(13%, -161%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
+  transform: translate(15%, -160%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(1);
   --bgColor: #add8e6;
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   font-style: italic;
@@ -87,7 +87,7 @@ body::before {
 }
 
 .isAgentMenu .agentMenu__item--artifact {
-  transform: translate(13%, -161%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleX(1);
+  transform: translate(15%, -163%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleX(1);
 }
 
 .agentMenu__item--person {
@@ -144,33 +144,6 @@ body::before {
 }
 
 .isAgentMenu .agentMenu__item {
-  opacity: 1;
-}
-
-.selectedAgentMenu {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  background: black;
-  color: #aaddaa;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 1000ms;
-  line-height: 2;
-  font-size: 14px;
-}
-
-.selectedAgentMenu__item {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-.isSelectedAgentMenu .selectedAgentMenu {
-  /* opacity: 1; */
-  visibility: visible;
-}
-
-.isSelectedAgentMenu .selectedAgentMenu__item:hover {
   opacity: 1;
 }
 
@@ -329,6 +302,16 @@ body::before {
   visibility: hidden;
 }
 
+.otherComplex {
+  color: #add8e6;
+  user-select: none;
+  font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Georgia', serif;
+  padding: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-top: 1px solid;
+}
+
 .isSelecting .selectionBox {
   opacity: 1;
   visibility: visible;
@@ -350,7 +333,8 @@ body::before {
 
 .button {
   position: relative;
-  color: #add8e6;
+  background: #add8e6;
+  color: black;
   padding: 12px 10px;
   border: 1px solid;
   border-radius: 3px;
@@ -381,8 +365,8 @@ body::before {
 }
 
 .button:hover {
-  background: #add8e6;
-  color: #111111;
+  color: #add8e6;
+  background: #111111;
 }
 
 .complexSelect {
@@ -390,7 +374,7 @@ body::before {
   outline: none;
   border-radius: 3px;
   border: 1px solid;
-  background: #000;
+  background: transparent;
   color: #add8e6;
   user-select: none;
   font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Georgia', serif;
@@ -401,7 +385,7 @@ body::before {
 .message {
   position: absolute;
   font-weight: 200;
-  left: 10px;
+  left: 15vw;
   top: 10px;
   color: #ffa07a;
   padding: 0;
@@ -411,7 +395,7 @@ body::before {
   transform: translate(21%, 8.5%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
   transition: 1s;
   line-height: 1.5;
-  width: 80vw;
+  width: 48vw;
   user-select: none;
 }
 
@@ -424,7 +408,6 @@ body::before {
   transform: translate(1%, 8.5%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleY(1);
   user-select: none;
 }
-
 
 .message span,
 .instructions span {

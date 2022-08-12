@@ -244,6 +244,7 @@ body::before {
 .isSelectedAgentMenu .button--newFromSelected,
 .isSelectedAgentMenu .button--copySelected {
   opacity: 1;
+  display: block;
   pointer-events: auto;
   transform: none;
 }
@@ -306,10 +307,14 @@ body::before {
   color: #add8e6;
   user-select: none;
   font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Georgia', serif;
-  padding: 4px;
+  padding: 4px 0 4px 0;
   font-size: 14px;
   margin-bottom: 10px;
   border-top: 1px solid;
+}
+
+.otherComplex:hover {
+  opacity: 0.7;
 }
 
 .isSelecting .selectionBox {
@@ -327,8 +332,14 @@ body::before {
 
 .menu {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background: #00000055;
+}
+
+.menu:hover {
+  background: #000000;
 }
 
 .button {
@@ -344,6 +355,7 @@ body::before {
 }
 
 .button--copySelected {
+  display: none;
   opacity: 0;
   pointer-events: none;
   transition: opacity 200ms, transform 200ms;
@@ -351,6 +363,7 @@ body::before {
 }
 
 .button--newFromSelected {
+  display: none;
   opacity: 0;
   pointer-events: none;
   transition: opacity 200ms, transform 200ms;

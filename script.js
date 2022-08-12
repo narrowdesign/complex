@@ -23,7 +23,10 @@ const mapEl = document.querySelector('.map')
 const complexSelectEl = document.querySelector('.complexSelect');
 const newFromSelectedButton = document.querySelector('.button--newFromSelected');
 const copySelectedButton = document.querySelector('.button--copySelected');
-const elsewhereEl = document.querySelector('.elsewhereList');
+const newButton = document.querySelector('.button--newComplex');
+const deleteButton = document.querySelector('.button--delete');
+const backupButton = document.querySelector('.button--backup');
+const elsewhereListEl = document.querySelector('.elsewhereList');
 
 window.addEventListener('mousedown', handleMouseDown);
 window.addEventListener('mouseup', handleMouseUp);
@@ -39,6 +42,21 @@ agentMenuItemListEls.forEach((item) => {
 newFromSelectedButton.addEventListener('mousedown', (e) => {
   e.stopPropagation();
   createComplexFromSelected()
+});
+
+newButton.addEventListener('mousedown', (e) => {
+  e.stopPropagation();
+  createComplex()
+});
+
+deleteButton.addEventListener('mousedown', (e) => {
+  e.stopPropagation();
+  deleteComplex();
+});
+
+backupButton.addEventListener('mousedown', (e) => {
+  e.stopPropagation();
+  saveBackup();
 });
 
 copySelectedButton.addEventListener('mousedown', (e) => {
@@ -95,8 +113,6 @@ function initializeUI() {
     complexSelectEl.appendChild(option);
   })
   complexSelectEl.addEventListener('change', (e) => {
-    const destroy = complexState.agentList > 5 ? confirm('you sure? this will clear the current complex.') : true;
-    if (!destroy) return;
     applyState(JSON.parse(localStorage[e.target.value]))
   })
   animate();
@@ -472,7 +488,7 @@ function selectAgent(e, agent) {
     JSON.parse(localStorage[key]).agentList.forEach((otherAgent) => {
       const rawLabel = agent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
       const otherRawLabel = otherAgent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
-      if ((otherRawLabel.indexOf(rawLabel) !== -1 || otherRawLabel === lastName) && !matched) {
+      if (rawLabel !== '' && !matched && (otherRawLabel.indexOf(rawLabel) !== -1 || otherRawLabel === lastName)) {
         canvasState.alsoList.push(key);
         matched = true;
       }
@@ -688,8 +704,11 @@ function showSelectedAgentMenu(e) {
     const agentEl = document.createElement('div');
     agentEl.innerHTML = complex;
     agentEl.classList.add('otherComplex');
-    selectedAgentMenuEl.prepend(agentEl);
-    elsewhereEl.style.transform = `translate(${canvasState.selectedList[0].x + canvasState.x}px,${canvasState.selectedList[0].y + canvasState.y}px)`
+    elsewhereListEl.appendChild(agentEl);
+    agentEl.addEventListener('mousedown', (e) => {
+      applyState(JSON.parse(localStorage[e.target.innerText]));
+      complexSelectEl.value = e.target.innerText;
+    })
   })
 }
 
@@ -895,14 +914,31 @@ const Line = function (startX, startY, endX, endY, id) {
 }
 
 function createComplexFromSelected() {
-  clearCanvas();
-  const selectedAgents = canvasState.selectedList;
-  complexState.relationshipList = [];
-  complexState.name = prompt('Name this complex') || null;
-  resetCanvasState();
-  selectedAgents.forEach((agent, i) => {
+  createComplex();
+  canvasState.selectedList.forEach((agent, i) => {
     createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, null, i);
   })
+}
+
+function createComplex() {
+  complexState.relationshipList = [];
+  complexState.name = '';
+  complexState.name = prompt('Name this complex') || null;
+  clearCanvas();
+  saveState();
+}
+
+function deleteComplex() {
+  complexState.agentList.forEach((agent, i) => {
+    agent.style.transform = `translate(${agent.x}px, ${agent.y}px) scale(0.2)`;
+    agent.style.opacity = `0`;
+    agent.style.transition = `transform 200ms, opacity 200ms`;
+    agent.style.transitionDelay = `${i * 20}ms`;
+  })
+  setTimeout(() => {
+    clearCanvas();
+  }, 2000)
+  localStorage.removeItem(complexState.name);
 }
 
 function copySelected() {
@@ -929,13 +965,42 @@ function saveState() {
   localStorage.setItem(complexState.name, JSON.stringify(complexState));
 }
 
+function saveBackup() {
+  let textFile = null;
+  const makeTextFile = function (text) {
+    const data = new Blob([text], {type: 'text/plain'});
+
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
+    }
+
+    textFile = window.URL.createObjectURL(data);
+
+    return textFile;
+  };
+
+  const link = document.createElement('a');
+  const date = new Date();
+  link.setAttribute('download', `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}.local`);
+  link.href = makeTextFile(JSON.stringify(localStorage));
+  document.body.appendChild(link);
+
+  // wait for the link to be added to the document
+  window.requestAnimationFrame(function () {
+    const event = new MouseEvent('click');
+    link.dispatchEvent(event);
+    document.body.removeChild(link);
+  });
+}
+
 function applyState(state) {
   clearCanvas();
   complexState = JSON.parse(JSON.stringify(state));
   complexState.agentList.forEach((agent, i) => {
     createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, agent.uuid, i);
   })
-  resetCanvasState();
   
   complexState.relationshipList.forEach((rel, i) => {
     complexState.agentList.forEach((agent) => {
@@ -972,11 +1037,12 @@ function resetCanvasState() {
 }
 
 function clearCanvas() {
+  resetCanvasState();
   mapEl.style.transform = `translate(0,0)`;
   complexState.agentList.forEach((agent) => {
     agent.remove();
-    complexState.agentList = [];
   })
+  complexState.agentList = [];
   complexState.relationshipList.forEach((rel) => {
     rel.forEach((el, i) => {
       if (i === 0) {

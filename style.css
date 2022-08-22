@@ -1,4 +1,9 @@
 body {
+  --pink: #f8b8de;
+  --blue: #add8e6;
+  --orange: #ffa07a;
+  --green: #aaddaa;
+  --grey: #c6c1c1;
   font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Georgia', serif;
   padding: 0;
   margin: 0;
@@ -64,7 +69,7 @@ body::before {
 
 .agentMenu__item--concept {
   transform: translate(11%, 0%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(1);
-  --bgColor: #ffa07a;
+  --bgColor: var(--orange);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
   border-bottom: 2px solid #79341399;
@@ -78,7 +83,7 @@ body::before {
 
 .agentMenu__item--artifact {
   transform: translate(15%, -160%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(1);
-  --bgColor: #add8e6;
+  --bgColor: var(--blue);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   font-style: italic;
   border-right: 2px solid #3e7a8e99;
@@ -92,7 +97,7 @@ body::before {
 
 .agentMenu__item--person {
   transform: translate(1%, -100%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleX(1);
-  --bgColor: #f8b8de;
+  --bgColor: var(--pink);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
   border-right: 2px solid #c780be99;
@@ -106,7 +111,7 @@ body::before {
 
 .agentMenu__item--organization {
   transform: translate(-79%, -66%) rotateX(54.75deg) rotateY(0deg) rotateZ(315deg) scaleY(1);
-  --bgColor: #c6c1c1;
+  --bgColor: var(--grey);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #ddddee99;
   border-left: 2px solid #99888899;
@@ -120,7 +125,7 @@ body::before {
 
 .agentMenu__item--place {
   transform: translate(-50.5%, -47%) rotateY(35.75deg) rotateZ(-25deg) rotateX(330deg) scaleY(1);
-  --bgColor: #aaddaa;
+  --bgColor: var(--green);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
   border-bottom: 2px solid #63886399;
@@ -134,7 +139,7 @@ body::before {
 
 .agentMenu__item--other {
   transform: translate(-50%, 100%);
-  color: #c6c1c1;
+  color: var(--grey);
   font-size: 16px;
 }
 
@@ -187,7 +192,7 @@ body::before {
 }
 
 .agent--concept .agent__label {
-  --bgColor: #ffa07a;
+  --bgColor: var(--orange);
   transform: rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
@@ -196,7 +201,7 @@ body::before {
 }
 
 .agent--artifact .agent__label {
-  --bgColor: #add8e6;
+  --bgColor: var(--blue);
   transform: rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   font-style: italic;
@@ -206,7 +211,7 @@ body::before {
 }
 
 .agent--person .agent__label {
-  --bgColor: #f8b8de;
+  --bgColor: var(--pink);
   transform: rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
@@ -215,7 +220,7 @@ body::before {
 }
 
 .agent--organization .agent__label {
-  --bgColor: #c6c1c1;
+  --bgColor: var(--grey);
   transform: rotateX(54.75deg) rotateY(0deg) rotateZ(315deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #ddddee99;
@@ -224,7 +229,7 @@ body::before {
 }
 
 .agent--place .agent__label {
-  --bgColor: #aaddaa;
+  --bgColor: var(--green);
   transform: rotateY(35.75deg) rotateZ(-25deg) rotateX(330deg);
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
@@ -247,10 +252,11 @@ body::before {
   display: block;
   pointer-events: auto;
   transform: none;
+  background: var(--pink);
 }
 
 .isHighlighted .agent__label {
-  box-shadow: 0 0 30px #f8b8de;
+  box-shadow: 0 0 30px var(--pink);
   outline: 1px solid #ffffff99;
 }
 
@@ -304,7 +310,7 @@ body::before {
 }
 
 .otherComplex {
-  color: #add8e6;
+  color: var(--blue);
   user-select: none;
   font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Georgia', serif;
   padding: 4px 0 4px 0;
@@ -344,7 +350,7 @@ body::before {
 
 .button {
   position: relative;
-  background: #add8e6;
+  background: var(--blue);
   color: black;
   padding: 12px 10px;
   border: 1px solid;
@@ -378,7 +384,7 @@ body::before {
 }
 
 .button:hover {
-  color: #add8e6;
+  color: var(--blue);
   background: #111111;
 }
 
@@ -388,7 +394,7 @@ body::before {
   border-radius: 3px;
   border: 1px solid;
   background: transparent;
-  color: #add8e6;
+  color: var(--blue);
   user-select: none;
   font-family: 'New York', -apple-system-ui-serif, ui-serif, 'Georgia', serif;
   padding: 4px;
@@ -400,7 +406,7 @@ body::before {
   font-weight: 200;
   left: 15vw;
   top: 10px;
-  color: #ffa07a;
+  color: var(--orange);
   padding: 0;
   margin: 0;
   animation: fade-up 1s forwards;
@@ -416,7 +422,7 @@ body::before {
   position: fixed;
   bottom: 20px;
   left: 0px;
-  color: #ffa07a;
+  color: var(--orange);
   transform-origin: 80% 10%;
   transform: translate(1%, 8.5%) rotateX(54.75deg) rotateY(0deg) rotateZ(-315deg) scaleY(1);
   user-select: none;
@@ -425,7 +431,7 @@ body::before {
 .message span,
 .instructions span {
   display: block;
-  color: #f8b8de;
+  color: var(--pink);
   transform-origin: 0 0;
   transform: skewX(45deg);
 }

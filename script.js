@@ -106,16 +106,21 @@ let complexState = {
 }
 
 function initializeUI() {
+  setComplexSelectList();
+  complexSelectEl.addEventListener('change', (e) => {
+    applyState(JSON.parse(localStorage[e.target.value]))
+  })
+  animate();
+}
+
+function setComplexSelectList() {
+  complexSelectEl.innerHTML = '<option value="none" selected disabled>Open complexes</option>';
   Object.keys(localStorage).sort().forEach((key) => {
     const option = document.createElement("option");
     option.value = key;
     option.text = key;
     complexSelectEl.appendChild(option);
   })
-  complexSelectEl.addEventListener('change', (e) => {
-    applyState(JSON.parse(localStorage[e.target.value]))
-  })
-  animate();
 }
 
 function hideAgentMenu() {
@@ -267,7 +272,7 @@ function removeAgent(agent) {
       }
     }
   }
-
+  alsoList = [];
   agent.remove();
 }
 
@@ -476,10 +481,7 @@ function selectAgent(e, agent) {
     item.isSelected = true;
   })
   canvasState.isAgentDragging = false;
-  canvasState.alsoList = [];
-  document.querySelectorAll('.otherComplex').forEach((other) => {
-    other.remove();
-  })
+  clearAlsoList();
   Object.keys(localStorage).forEach((key) => {
     if (key === complexState.name) return;
     let matched = false;
@@ -488,13 +490,20 @@ function selectAgent(e, agent) {
     JSON.parse(localStorage[key]).agentList.forEach((otherAgent) => {
       const rawLabel = agent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
       const otherRawLabel = otherAgent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
-      if (rawLabel !== '' && !matched && (otherRawLabel.indexOf(rawLabel) !== -1 || otherRawLabel === lastName)) {
+      if (rawLabel.length > 1 && !matched && (otherRawLabel.indexOf(rawLabel) !== -1 || otherRawLabel === lastName)) {
         canvasState.alsoList.push(key);
         matched = true;
       }
     })  
   })
   showSelectedAgentMenu(e);
+}
+
+function clearAlsoList() {
+  canvasState.alsoList = [];
+  document.querySelectorAll('.otherComplex').forEach((other) => {
+    other.remove();
+  })
 }
 
 function deselectAgent(agent) {
@@ -662,7 +671,7 @@ function clearSelectedList() {
   document.querySelectorAll('.otherComplex').forEach((other) => {
     other.remove();
   })
-  canvasState.alsoList = [];
+  clearAlsoList();
   document.body.classList.remove('isSelectedAgentMenu');
 }
 
@@ -914,10 +923,14 @@ const Line = function (startX, startY, endX, endY, id) {
 }
 
 function createComplexFromSelected() {
+  const newList = [...canvasState.selectedList];
   createComplex();
-  canvasState.selectedList.forEach((agent, i) => {
+  newList.forEach((agent, i) => {
     createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, null, i);
-  })
+  });
+  setTimeout(() => {
+    saveState();
+  }, 1000)
 }
 
 function createComplex() {
@@ -929,6 +942,8 @@ function createComplex() {
 }
 
 function deleteComplex() {
+  const confirmed = prompt(`Type “${complexState.name}” to permanently delete this complex and its contents`) === complexState.name;
+  if (!confirmed) return;
   complexState.agentList.forEach((agent, i) => {
     agent.style.transform = `translate(${agent.x}px, ${agent.y}px) scale(0.2)`;
     agent.style.opacity = `0`;
@@ -939,6 +954,7 @@ function deleteComplex() {
     clearCanvas();
   }, 2000)
   localStorage.removeItem(complexState.name);
+  setComplexSelectList()
 }
 
 function copySelected() {
@@ -983,7 +999,7 @@ function saveBackup() {
 
   const link = document.createElement('a');
   const date = new Date();
-  link.setAttribute('download', `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}.local`);
+  link.setAttribute('download', `${date.getFullYear()}-${(String(date.getMonth() + 1).padStart(2, "0"))}-${String(date.getDate()).padStart(2, "0")}.local`);
   link.href = makeTextFile(JSON.stringify(localStorage));
   document.body.appendChild(link);
 

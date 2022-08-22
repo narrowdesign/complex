@@ -241,6 +241,13 @@ body::before {
   color: #f7f7cb;
 }
 
+.isActiveComplex .button--delete {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+  transform: none;
+}
+
 .isSelected .agent__label {
   outline: 2px solid #ffffffdd !important;
   user-select: auto;
@@ -360,15 +367,9 @@ body::before {
   font-size: 14px;
 }
 
-.button--copySelected {
-  display: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 200ms, transform 200ms;
-  transform: scale(0.8);
-}
-
-.button--newFromSelected {
+.button--copySelected,
+.button--newFromSelected,
+.button--delete {
   display: none;
   opacity: 0;
   pointer-events: none;
@@ -437,9 +438,7 @@ body::before {
 }
 
 .isInitialized .message {
-  opacity: 0;
-  animation: none;
-  transition: 1s;
+  display: none;
 }
 
 .isIsolated .agent,

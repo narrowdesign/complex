@@ -109,6 +109,7 @@ function initializeUI() {
   setComplexSelectList();
   complexSelectEl.addEventListener('change', (e) => {
     applyState(JSON.parse(localStorage[e.target.value]))
+    document.body.classList.add('isActiveComplex');
   })
   animate();
 }
@@ -136,6 +137,7 @@ function handleMouseUpAgentMenuItem(e) {
 }
 
 function handleKeyUp(e) {
+  saveState();
   switch (e.key) {
     case 'Alt':
       canvasState.isAltKey = false;
@@ -210,7 +212,6 @@ function handleKeyUp(e) {
 }
 
 function handleKeyPress(e) {
-  saveState();
   switch (e.key) {  
     case 'Enter':
       if (!e.shiftKey) {
@@ -246,18 +247,17 @@ function removeEmpty() {
   const agentType = agent.classList.contains('agent') ? 'agent' : 'relationship';
 
   if (agent.innerText === '') {
-    saveState();
     if (agentType === 'agent') {
       const agentIndex = complexState.agentList.indexOf(agent);
       complexState.agentList.splice(agentIndex, 1)
     }
-    removeAgent(agent)
+    removeAgent(agent);
   }
 }
 
 function removeAgent(agent) {
   const relationshipMatches = getRelationshipMatches(agent)
-  for (let i = complexState.agentList.length; i > 0; i--) {
+  for (let i = complexState.agentList.length; i >= 0; i--) {
     if (agent === complexState.agentList[i]) {
       complexState.agentList.splice(i,1);
     }
@@ -274,6 +274,7 @@ function removeAgent(agent) {
   }
   alsoList = [];
   agent.remove();
+  saveState();
 }
 
 function getSelectedRelationships() {
@@ -546,13 +547,16 @@ function setDefaultCanvasState() {
 
 function dragCanvas() {
   canvasState.isCanvasDragging = true;
+  updateCanvasPosition()
+}
+
+function updateCanvasPosition() {
   canvasState.x += canvasState.mouseMoveX;
   canvasState.y += canvasState.mouseMoveY;
   canvasState.centerX -= canvasState.mouseMoveX;
   canvasState.centerY -= canvasState.mouseMoveY;
   mapEl.style.transform = `translate(${canvasState.x}px, ${canvasState.y}px)`;
 }
-
 
 function dragGhosted() {
   canvasState.isGhostDragging = true;
@@ -937,8 +941,12 @@ function createComplex() {
   complexState.relationshipList = [];
   complexState.name = '';
   complexState.name = prompt('Name this complex') || null;
+  if (!complexState.name) return;
   clearCanvas();
   saveState();
+  document.body.classList.add('isAgentMenu');
+  agentMenuEl.style.transform = `translate(${canvasState.centerX}px, ${canvasState.centerY}px)`;
+  document.body.classList.add('isActiveComplex');
 }
 
 function deleteComplex() {
@@ -955,6 +963,7 @@ function deleteComplex() {
   }, 2000)
   localStorage.removeItem(complexState.name);
   setComplexSelectList()
+  document.body.classList.remove('isActiveComplex');
 }
 
 function copySelected() {
@@ -1030,8 +1039,7 @@ function applyState(state) {
     connectAgents(i, rel[4]);
   })
 
-
-  dragCanvas()
+  updateCanvasPosition();
 }
 
 function resetCanvasState() {

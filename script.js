@@ -109,7 +109,7 @@ function initializeUI() {
   setComplexSelectList();
   complexSelectEl.addEventListener('change', (e) => {
     applyState(JSON.parse(localStorage[e.target.value]))
-    document.body.classList.add('isActiveComplex');
+    initializeCanvas();
   })
   animate();
 }
@@ -121,6 +121,9 @@ function setComplexSelectList() {
     option.value = key;
     option.text = key;
     complexSelectEl.appendChild(option);
+    if (complexState.name !== '' && key === complexState.name) {
+      option.selected = true;
+    }
   })
 }
 
@@ -484,7 +487,7 @@ function selectAgent(e, agent) {
   canvasState.isAgentDragging = false;
   clearAlsoList();
   Object.keys(localStorage).forEach((key) => {
-    if (key === complexState.name) return;
+    if (key !== '' && key === complexState.name) return;
     let matched = false;
     const nameParts = agent.label.split(' ')
     const lastName = agent.type === "person" ? nameParts[nameParts.length - 1].toLowerCase() : false;
@@ -732,10 +735,6 @@ function hideSelectedAgentMenu() {
 
 function createAgent(type = canvasState.currentType, text = '', x = canvasState.mouseDownX, y = canvasState.mouseDownY, scale = 1, blur = 0, uuid, index) {
   let label = text;
-  if (!canvasState.isInitialized) {
-    canvasState.isInitialized;
-    document.body.classList.add('isInitialized');
-  }
 
   if (complexState.agentList.length === 0 && index === undefined) {
     if (!complexState.name) {
@@ -743,6 +742,8 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
       label = complexState.name;
     }
   }
+
+  initializeCanvas();
 
   canvasState.currentType = type || canvasState.currentType;
   const agentEl = document.createElement('div');
@@ -940,13 +941,22 @@ function createComplexFromSelected() {
 function createComplex() {
   complexState.relationshipList = [];
   complexState.name = '';
-  complexState.name = prompt('Name this complex') || null;
-  if (!complexState.name) return;
+  complexState.name = prompt('Name this complex') || '';
+  if (complexState.name === '') return;
   clearCanvas();
   saveState();
+  setComplexSelectList();
+  initializeCanvas();
+}
+
+function initializeCanvas() {
+  canvasState.isInitialized = true;
+  document.body.classList.add('isInitialized')
+  document.body.classList.add('isActiveComplex');
+
+  if (complexState.agentList.length !== 0) return;
   document.body.classList.add('isAgentMenu');
   agentMenuEl.style.transform = `translate(${canvasState.centerX}px, ${canvasState.centerY}px)`;
-  document.body.classList.add('isActiveComplex');
 }
 
 function deleteComplex() {

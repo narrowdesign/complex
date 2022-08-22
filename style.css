@@ -414,7 +414,7 @@ body::before {
   transform-origin: -10% 100%;
   transform: translate(21%, 8.5%) rotateY(-35.75deg) rotateZ(25deg) rotateX(330deg) scaleY(0);
   transition: 1s;
-  line-height: 1.5;
+  line-height: 1.75;
   width: 48vw;
   user-select: none;
 }

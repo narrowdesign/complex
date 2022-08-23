@@ -197,7 +197,7 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
   border-bottom: 2px solid #79341399;
-  animation: glow 0.6s infinite;
+  animation: glow 6s infinite;
 }
 
 .agent--artifact .agent__label {
@@ -207,7 +207,7 @@ body::before {
   font-style: italic;
   border-right: 2px solid #3e7a8e99;
   border-bottom: 2px solid #709fae99;
-  animation: glow 1s infinite;
+  animation: glow 10s infinite;
 }
 
 .agent--person .agent__label {
@@ -216,7 +216,7 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
   border-right: 2px solid #c780be99;
-  animation: glow 2.1s infinite;
+  animation: glow 21s infinite;
 }
 
 .agent--organization .agent__label {
@@ -225,7 +225,7 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #ddddee99;
   border-left: 2px solid #99888899;
-  animation: glow 3.2s infinite;
+  animation: glow 32s infinite;
 }
 
 .agent--place .agent__label {
@@ -234,7 +234,7 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
   border-bottom: 2px solid #63886399;
-  animation: glow 4.3s infinite;
+  animation: glow 43s infinite;
 }
 
 .agent--other .agent__label {
@@ -469,8 +469,14 @@ body::before {
 @keyframes glow {
   0% {
     opacity: 1;
-  } 50% {
+  } 5% {
     opacity: 0.9;
+  } 10% {
+    opacity: 1;
+  } 15% {
+    opacity: 0.9;
+  } 20% {
+    opacity: 1;
   } 100% {
     opacity: 1;
   }

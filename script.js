@@ -769,7 +769,7 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
     agentLabelEl.style.transition = 'opacity 500ms, transform 400ms';
     agentLabelEl.style.filter = `blur(${blur}px)`;
   }, 10 * index);
-  agentLabelEl.style.animationDelay = `${Math.random()}s`;
+  agentLabelEl.style.animationDelay = `${Math.random() * 10}s`;
   agentEl.label = label;
   agentLabelEl.contentEditable = true;
   agentLabelEl.innerText = label;

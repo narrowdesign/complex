@@ -982,7 +982,7 @@ function copySelected() {
 
 function pasteSelected() {
   canvasState.copiedAgents.forEach((agent, i) => {
-    const newAgent = createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, null, i);
+    const newAgent = createAgent(agent.type, agent.label, agent.x, agent.y, agent.scale, agent.blur, null, undefined);
     // selectAgent(newAgent);
   })
 }

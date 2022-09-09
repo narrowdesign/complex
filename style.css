@@ -73,7 +73,6 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-right: 2px solid #974d3099;
   border-bottom: 2px solid #79341399;
-  animation: glow 0.6s infinite;
   transition-delay: 0ms;
 }
 
@@ -101,7 +100,6 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #f8dede99;
   border-right: 2px solid #c780be99;
-  animation: glow 2.1s infinite;
   transition-delay: 150ms;
 }
 
@@ -115,7 +113,6 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-top: 2px solid #ddddee99;
   border-left: 2px solid #99888899;
-  animation: glow 3.2s infinite;
   transition-delay: 50ms;
 }
 
@@ -129,7 +126,6 @@ body::before {
   background: radial-gradient(var(--bgColor) 40%, transparent 75%), radial-gradient(#add8e699 30%, transparent 70%) -40px -8px no-repeat, radial-gradient(#f8b8de99 30%, transparent 70%) -40px 8px no-repeat, radial-gradient(#aaddaa99 30%, transparent 70%) 40px 8px no-repeat,radial-gradient(#ffa07a99 30%, transparent 70%) 40px -8px no-repeat;
   border-left: 2px solid #73a97399;
   border-bottom: 2px solid #63886399;
-  animation: glow 4.3s infinite;
   transition-delay: 100ms;
 }
 
@@ -154,11 +150,11 @@ body::before {
 
 .agent__label {
   font-size: 24px;
-  padding: 0;
+  line-height: 1;
   margin: 0;
   position: absolute;
   z-index: 2;
-  padding: 2px 12px 3px;
+  padding: 5px 12px 6px;
   border-radius: 8px;
   text-align: center;
   white-space: pre;

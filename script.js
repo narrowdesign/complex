@@ -117,6 +117,7 @@ function initializeUI() {
 function setComplexSelectList() {
   complexSelectEl.innerHTML = '<option value="none" selected disabled>Open complexes</option>';
   Object.keys(localStorage).sort().forEach((key) => {
+    if (!JSON.parse(localStorage[key]).agentList) return;
     const option = document.createElement("option");
     option.value = key;
     option.text = key;
@@ -487,6 +488,7 @@ function selectAgent(e, agent) {
   canvasState.isAgentDragging = false;
   clearAlsoList();
   Object.keys(localStorage).forEach((key) => {
+    if (!JSON.parse(localStorage[key]).agentList) return;
     if (key !== '' && key === complexState.name) return;
     let matched = false;
     const nameParts = agent.label.split(' ')

@@ -35,6 +35,19 @@ window.addEventListener('keydown', handleKeyDown)
 window.addEventListener('keyup', handleKeyUp)
 window.addEventListener('keypress', handleKeyPress)
 
+const fileSelector = document.getElementById('file-selector');
+
+fileSelector.addEventListener('change', (event) => {
+  const reader = new FileReader();
+  const [file] = document.querySelector('input[type=file]').files;
+  reader.readAsText(file);
+
+  reader.addEventListener('load', (event) => {
+    const data = JSON.parse(reader.result);
+    loadBackup(data)
+  });
+});
+
 agentMenuItemListEls.forEach((item) => {
   item.addEventListener('mouseup', handleMouseUpAgentMenuItem);
 })
@@ -771,7 +784,7 @@ function createAgent(type = canvasState.currentType, text = '', x = canvasState.
     agentLabelEl.style.transition = 'opacity 500ms, transform 400ms';
     agentLabelEl.style.filter = `blur(${blur}px)`;
   }, 10 * index);
-  agentLabelEl.style.animationDelay = `${Math.random() * 10}s`;
+  agentLabelEl.style.animationDelay = `${Math.random() * 2}s`;
   agentEl.label = label;
   agentLabelEl.contentEditable = true;
   agentLabelEl.innerText = label;
@@ -968,7 +981,7 @@ function deleteComplex() {
     agent.style.transform = `translate(${agent.x}px, ${agent.y}px) scale(0.2)`;
     agent.style.opacity = `0`;
     agent.style.transition = `transform 200ms, opacity 200ms`;
-    agent.style.transitionDelay = `${i * 20}ms`;
+    agent.style.transitionDelay = `${i * 2}ms`;
   })
   setTimeout(() => {
     clearCanvas();
@@ -1000,6 +1013,12 @@ function saveState() {
   const state = JSON.parse(JSON.stringify(complexState));
   mementos.push(state);
   localStorage.setItem(complexState.name, JSON.stringify(complexState));
+}
+
+function loadBackup(data) {
+  Array.from(Object.keys(data)).forEach((object) => { 
+    localStorage.setItem(object, data[object]) 
+  })
 }
 
 function saveBackup() {

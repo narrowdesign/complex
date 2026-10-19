@@ -43,7 +43,13 @@ fileSelector.addEventListener('change', (event) => {
   reader.readAsText(file);
 
   reader.addEventListener('load', (event) => {
-    const data = JSON.parse(reader.result);
+    let data;
+    try {
+      data = JSON.parse(reader.result);
+    } catch (err) {
+      alert(`Couldn’t read ${file.name}: ${err.message}`);
+      return;
+    }
     loadBackup(data)
   });
 });
@@ -130,7 +136,7 @@ function initializeUI() {
 function setComplexSelectList() {
   complexSelectEl.innerHTML = '<option value="none" selected disabled>Open complexes</option>';
   Object.keys(localStorage).sort().forEach((key) => {
-    if (!JSON.parse(localStorage[key]).agentList) return;
+    if (!getStoredComplex(key)) return;
     const option = document.createElement("option");
     option.value = key;
     option.text = key;
@@ -501,12 +507,13 @@ function selectAgent(e, agent) {
   canvasState.isAgentDragging = false;
   clearAlsoList();
   Object.keys(localStorage).forEach((key) => {
-    if (!JSON.parse(localStorage[key]).agentList) return;
+    const otherComplex = getStoredComplex(key);
+    if (!otherComplex) return;
     if (key !== '' && key === complexState.name) return;
     let matched = false;
     const nameParts = agent.label.split(' ')
     const lastName = agent.type === "person" ? nameParts[nameParts.length - 1].toLowerCase() : false;
-    JSON.parse(localStorage[key]).agentList.forEach((otherAgent) => {
+    otherComplex.agentList.forEach((otherAgent) => {
       const rawLabel = agent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
       const otherRawLabel = otherAgent.label.toLowerCase().replace(/[^0-9a-z]/gi, '');
       if (rawLabel.length > 1 && !matched && (otherRawLabel.indexOf(rawLabel) !== -1 || otherRawLabel === lastName)) {
@@ -1015,10 +1022,30 @@ function saveState() {
   localStorage.setItem(complexState.name, JSON.stringify(complexState));
 }
 
+// localStorage can hold non-complex entries (e.g. analytics keys on a shared localhost origin)
+function getStoredComplex(key) {
+  try {
+    const value = JSON.parse(localStorage[key]);
+    return value && Array.isArray(value.agentList) ? value : null;
+  } catch (err) {
+    return null;
+  }
+}
+
 function loadBackup(data) {
-  Array.from(Object.keys(data)).forEach((object) => { 
-    localStorage.setItem(object, data[object]) 
+  const failed = [];
+  Object.keys(data).forEach((key) => {
+    const value = typeof data[key] === 'string' ? data[key] : JSON.stringify(data[key]);
+    try {
+      localStorage.setItem(key, value);
+    } catch (err) {
+      failed.push(`${key} (${err.name})`);
+    }
   })
+  setComplexSelectList();
+  if (failed.length) {
+    alert(`Loaded ${Object.keys(data).length - failed.length} of ${Object.keys(data).length} entries. Failed:\n${failed.join('\n')}`);
+  }
 }
 
 function saveBackup() {
